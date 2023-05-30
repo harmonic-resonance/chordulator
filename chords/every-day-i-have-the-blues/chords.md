@@ -1,0 +1,45 @@
+---
+title: 'Every Day I Have the Blues'
+subtitle: B.B King
+author: /home
+content:
+    items: '@self.children'
+child_type: article
+---
+
+===
+
+
+```text
+
+E          A                    E
+Everyday, everyday I have the blues
+  A                             E
+Everyday, everyday I have the blues
+B7
+When you see me worried baby
+A                           E
+Because it's you I hate to lose
+
+---
+
+Oh nobody loves me, nobody seems to care
+
+Yes nobody loves me, nobody seems to care
+
+Speaking of bad luck and trouble
+
+Well you know I had my share
+
+---
+
+I'm gonna pack my suitcase, move on down the line
+
+Yes I'm gonna pack my suitcase, move on down the line
+
+Where there ain't nobody worried
+
+And there ain't nobody crying
+
+
+```
