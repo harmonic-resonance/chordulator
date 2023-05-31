@@ -1,14 +1,9 @@
 ---
 title: 'Flip, Flop and Fly'
-subtitle: Big Joe Turner
-author: /home
-content:
-    items: '@self.children'
-child_type: article
+performer: Big Joe Turner
+composer:
 ---
 
-
-===
 
 ```text
 

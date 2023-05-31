@@ -1,16 +1,7 @@
 ---
 title: Jambalaya
-subtitle: Hank Williams
-author: /home
-content:
-    items: '@self.children'
-child_type: article
+performer: Hank Williams
 ---
-
-
-===
-
-```text
 
 
 [Verse 1]
@@ -24,7 +15,7 @@ My Yvonne, the sweetest one, me oh my oh.
 Son of a gun, we'll have big fun on the bayou.
 
 [Chorus]
-                                           G
+C                                           G
 Well jambalaya and a crawfish pie and filé gumbo
                                       C
 Cause tonight I'm gonna see my ma cher amio.
@@ -44,21 +35,6 @@ We dress in style and go hog wild, me oh my oh.
 Son of a gun, we'll have big fun on the bayou.
 
 [Chorus]
-                                           G
-Well jambalaya and a crawfish pie and filé gumbo
-                                      C
-Cause tonight I'm gonna see my ma cher amio.
-                                   G
-Pick guitar, fill fruit jar and be gayo,
-                                        C
-Son of a gun, we'll have big fun on the bayou.
+
 
 [Chorus]
-C                                          G
-Well jambalaya and a crawfish pie and filé gumbo
-                                       C
-Cause tonight I'm gonna see my ma cher amio.
-                                    G
-Pick guitar, fill fruit jar and be gayo,
-                                        C
-Son of a gun, we'll have big fun on the bayou.

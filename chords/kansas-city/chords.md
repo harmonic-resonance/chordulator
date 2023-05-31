@@ -1,16 +1,9 @@
 ---
 title: 'Kansas City'
-subtitle: 'Fats Domino'
-author: /home
-content:
-    items: '@self.children'
-child_type: article
+performer: 'Fats Domino'
 ---
 
-===
-
-```text
-
+[chorus]
   A
 I'm goin' to Kansas City, Kansas City here I come,
              D                                A
@@ -20,7 +13,7 @@ They got some pretty little women there,
     D                A    E-E7
 And I'm gonna get me one.
 
----
+[verse]
 
   A
 I'm gonna be standin' on the corner,
@@ -35,7 +28,9 @@ With my Kansas City baby,
       D                     A     E
 And a bottle of Kansas City wine.
 
----
+[chorus]
+
+[verse]
 
    A
 Well, I might take a plane,
@@ -50,4 +45,5 @@ They got some crazy little women there,
     D                A    E-E7
 And I'm gonna get me some.
 
+[chorus]
 

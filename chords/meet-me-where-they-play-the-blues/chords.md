@@ -1,19 +1,13 @@
 ---
 title: 'Meet me where they play the Blues'
-subtitle: Steve Allen
-author: /home
-content:
-    items: '@self.children'
-child_type: article
+composer: Steve Allen
 ---
 
 
-===
+[Intro]
+G  B7  Em7   G7   C   Cm
 
-```text
-
-Intro:  G  B7  Em7   G7   C   Cm
-
+[verse]
 D  D9 D   G          G6      F          Dm7       G       G7
 I got a heart that's broken heart - ed, how do I mend it?
          C9            G/B               C7      D7
@@ -23,7 +17,7 @@ But if you're feeling gloomy, come a-running to me --
  G        B7        E7 Bm7-5 Am7   D7
 Meet me where they play the blues.
 
----
+[verse]
 
  D   D9   D    G           G6        F       Dm7       G       G7
 Peo- ple have said they've seen you dance in hideaway places;
@@ -46,7 +40,7 @@ So I'll linger 'til dawn while the trumpet wails on
  Am7         Cdim          D7
 Hopin' you'll happen this way.
 
----
+[verse]
 
 D   D9     D    G       G6       F       Dm7          G       G7
 I'm get - tin' tired of sippin' wine and watchin' it bubble;
@@ -58,11 +52,9 @@ G        B7         E7 Bm7-5 Am7   D7
 Meet me where they play the blues.
 
 
-(Instrumental interlude:  verse chords)
+[break - verse]
 
-
-Repeat Bridge:
-
+[verse]
 
 D   D9     D    G       G6       F       Dm7          G       G7
 I'm get - tin' tired of sippin' wine and watchin' it bubble;

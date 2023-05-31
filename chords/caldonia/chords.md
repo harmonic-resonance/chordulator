@@ -10,9 +10,8 @@ figure:
 ---
 
 
-===
 
-```text
+[verse]
 
 C    F    C    G    C
 C
@@ -23,6 +22,8 @@ She's long, lean, and lanky and ain't had nothing to eat
 But she's my baby and I love her just the same
        G                                      C
 Crazy 'bout that woman 'cause Caldonia is her name
+
+[chorus]
          C        C
 Caldonia, Caldonia - What makes your big head so hard?
   F                             C
@@ -30,7 +31,7 @@ I love her, I love her just the same
        G                                      C
 Crazy 'bout that woman 'cause Caldonia is her name
 
----
+[verse]
 
 C    F    C    G    C
 C
@@ -44,6 +45,8 @@ And that she was such a nice gal
 So, I'm going down to Caldonia's house
                  C
 And ask her just one more time
+
+[chorus]
         C         C
 Caldonia, Caldonia - What makes your big head so hard?
 F                             C
@@ -51,4 +54,4 @@ I love her, I love her just the same
 G                                      C
 Crazy 'bout that woman 'cause Caldonia is her name
 
-```
+

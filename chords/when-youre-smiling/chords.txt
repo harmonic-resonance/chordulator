@@ -1,0 +1,25 @@
+* When You're Smiling
+    title: When You're Smiling
+    composer: Joe Goodwin, Larry Shay, Mark Fisher
+    youtube: YXYRkp2HZto
+
+* Verse
+|   G                                Gmaj7
+- When you're smiling when you're smiling
+|                   E7          Am
+- The whole world smiles with you
+
+|   G                                Gmaj7
+- When you're laughing oh when you're laughing
+|       E7                Am
+- The sun comes shining through
+
+* Bridge
+|                   G7          C
+- But when you're crying you bring on the rain
+|                A7         D7
+- So stop your sighing be happy again
+|           G                         E7
+- Keep on smiling cause when you're smiling
+|       Am          D7          G
+- The whole world smiles with you
