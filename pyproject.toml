@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-chordulator = "harmonic_resonance.chordulator.__main__:main"
+chordulator = "harmonic_resonance.chordulator.app:run"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

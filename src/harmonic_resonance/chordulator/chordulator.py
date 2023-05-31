@@ -1,7 +1,7 @@
 """
 chordulator
 """
-from pychord import Chord
+#  from pychord import Chord
 
 def generate_chord_sheet_html(chord_sheet):
     lines = chord_sheet.strip().split('\n')
