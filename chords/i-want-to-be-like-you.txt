@@ -1,6 +1,5 @@
-* I Want To Be Like You
-    title: I Want To Be Like You
-    performer: Louis Prima
+:title: I Want To Be Like You
+:performer: Louis Prima
 
 * Intro
 |   Am E7 Am

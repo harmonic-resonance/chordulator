@@ -1,7 +1,6 @@
-* When the Saints Go Marching In
-    title: When the Saints Go Marching In
-    composer: Traditional
-    youtube: BPuHwVFiaZw
+:title: When the Saints Go Marching In
+:composer: Traditional
+:youtube: BPuHwVFiaZw
 
 * Verse
 |   C

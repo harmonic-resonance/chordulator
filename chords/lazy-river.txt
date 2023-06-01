@@ -1,7 +1,6 @@
-* Lazy River
-    title: Lazy River
-    composer: Hoagy Carmichael
-    youtube: Snv8K4CeSPA
+:title: Lazy River
+:composer: Hoagy Carmichael
+:youtube: Snv8K4CeSPA
 
 * Intro
 |   G   E

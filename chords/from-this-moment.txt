@@ -1,43 +1,42 @@
-* From This Moment
-  title: From This Moment
+:title: From This Moment
 
-* Verse 1
+* Verse
 |          G                  D
 - From this moment, life has begun
-|          C       D  
+|          C       D
 - From this moment, you are the one
 |      C                       G
 - Right beside you is where I belong
-| Am        D      G   
+| Am        D      G
 - From this moment on.
 
-* Verse 2
+* Verse
 |          G                   D
 - From this moment, I have been blessed
-|       C        D    
+|       C        D
 - I live only for your happiness
-|        C                           G 
+|        C                           G
 - And for your love, I'd give my last breath
 | Am        D      C
 - From this moment on.
 
 * Chorus
-|  G                                C 
+|  G                                C
 - I give my hand to you, with all my heart
-|      D                                    G            
+|      D                                    G
 - Can't wait to live my life with you, can't wait to start
-| G                        C 
+| G                        C
 - You and I will never be apart
 |    Em          C      G        D
 - My dreams came true because of you.
 
-* Verse 3                                                
-(modulate up 1 whole step)
+* Verse
+# modulate up 1 whole step
 |          A                    E
 - From this moment, as long as I live
-|       D           E 
+|       D           E
 - I will love you, I promise you this
-|         D                  A 
+|         D                  A
 - There is nothing I wouldn't give
 | Bm        E      D
 - From this moment on.
@@ -55,10 +54,10 @@
 |    F#m         D      A        E
 - My dreams came true because of you.
 
-* Verse 4
+* Verse
 |          G                    D
 - From this moment, as long as I live
-|       C           D  
+|       C           D
 - I will love you, I promise you this
 |         C                  G
 - There is nothing I wouldn't give
@@ -68,5 +67,5 @@
 * Outro
 |       C                      G
 - I will love you as long as I live
-| Am        D      C    G    D    G   
+| Am        D      C    G    D    G
 - From this moment on.

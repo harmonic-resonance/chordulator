@@ -1,6 +1,5 @@
-* Every Day I Have the Blues
-    title: Every Day I Have the Blues
-    performer: B.B King
+:title: Every Day I Have the Blues
+:performer: B.B King
 
 * Verse
 |   E          A                    E

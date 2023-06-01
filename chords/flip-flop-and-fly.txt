@@ -1,7 +1,5 @@
-* Flip, Flop and Fly
-    title: 'Flip, Flop and Fly'
-    performer: Big Joe Turner
-    composer:
+:title: Flip, Flop and Fly
+:performer: Big Joe Turner
 
 * Verse
 |       E

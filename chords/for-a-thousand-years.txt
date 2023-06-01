@@ -1,11 +1,10 @@
-* For A Thousand Years
-  title: For A Thousand Years
-  performer: Christina Perri
+:title: For A Thousand Years
+:performer: Christina Perri
 
 * Intro
 | G    D/F#   Em7    D  Cadd9     Dsus4   D  (single notes G F# D)
 
-* Verse 1
+* Verse
 | Cadd9                       G/B
 - Heart beat fast, colors and promises
 |          Em7              D/F#      G    Cadd9
@@ -25,7 +24,7 @@
 |      Cadd9                            Dsus4    D   N.C.
 - For a thousand years, I love you for a thousand more
 
-* Verse 2
+* Verse
 | Cadd9                        G/B
 - Time stands still, beauty in all she is
 |          Em7               D/F#    G

@@ -1,7 +1,6 @@
-* Jump Jive and Wail
-    title: Jump Jive and Wail
-    performer: Louis Prima
-    youtube: q4V8pbg3rNU
+:title: Jump Jive and Wail
+:performer: Louis Prima
+:youtube: q4V8pbg3rNU
 
 * Verse
 |   A
@@ -25,7 +24,7 @@
 |   E                     D               A
 - You gotta jump, jive, and then you wail away!
 
-* Saxophone solo
+* solo
 |   A A D A E A
 
 * Verse
@@ -38,7 +37,7 @@
 
 * Chorus
 
-* Guitar solo
+* solo
 |   A A D A E A
 
 * Verse

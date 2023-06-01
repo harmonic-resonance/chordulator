@@ -1,12 +1,12 @@
-* Minnie the Moocher
-    title: Minnie the Moocher
-    performer: Cab Calloway
+:title: Minnie the Moocher
+:performer: Cab Calloway
 
-(Strong blues feel, 95bpm)
+* Intro
+# Strong blues feel, 95bpm
 |Em   B7  |Em       |Em   B7  |Em       |Em   B7  |Em       |
 |C7       |Em/B B7/F# Em |Em       |Em       |Em       |C7   B7   |
 
-* Verse 1
+* Verse
 |   Em
 - Folks, here's the story 'bout Minnie the Moocher,
 |   C7                   B7      Em
@@ -23,7 +23,7 @@
 |   He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)
 |   Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)
 
-* Verse 2
+* Verse
 |   Em
 - She messed around with a bloke named Smoky,
 |   C7                     B7     Em
@@ -40,7 +40,7 @@
 |   He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)
 |   Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)
 
-* Verse 3
+* Verse
 |   Em
 - She had a dream about the king of Sweden,
 |   C7                        B7      Em

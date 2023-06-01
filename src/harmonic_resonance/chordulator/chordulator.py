@@ -1,3 +1,5 @@
+import pkg_resources
+
 def generate_chord_sheet_html(chord_sheet):
     lines = chord_sheet.strip().split("\n")
 
@@ -10,25 +12,16 @@ def generate_chord_sheet_html(chord_sheet):
 
     title = fields.get("title", "Chord Sheet")
 
+    css_path = pkg_resources.resource_filename("harmonic_resonance.chordulator", "styles.css")
+    with open(css_path) as css_file:
+        css_contents = css_file.read()
+
     output = f"""\
 <html>
 <head>
 <title>{title}</title>
 <style>
-body {{ font-family: 'Fira Sans', sans-serif; }}
-pre {{ font-family: 'Fira Mono', monospace; }}
-.line {{ 
-  page-break-inside: avoid;
-  margin-top: .5em;
-}}
-.comment {{ font-style: italics }}
-.chords, .lyrics {{ margin: 0; }}
-.chords {{
-  font-weight: bold;
-}}
-section {{
-  margin-top: 2em;
-}}
+{css_contents}
 </style>
 </head>
 <body>

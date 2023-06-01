@@ -1,10 +1,9 @@
-* I Got a Woman
-    title: I Got a Woman
-    performer: Ray Charles
-    youtube: CnI_LuCJ4Ek
+:title: I Got a Woman
+:performer: Ray Charles
+:youtube: CnI_LuCJ4Ek
 
-* Verse 1
-|   A                             E
+* Verse
+| A                             E
 - Well, I got a woman, way over town,
 |              A   D   A   A7
 - she's good to me, oh, yeah.
@@ -21,8 +20,8 @@
 |              A   D     A
 - She's good to me, whoa, yeah.
 
-* Verse 2
-|   A                                  E
+* Verse
+| A                                  E
 - She saves her lovin', early in the mornin',
 |          A   D   A
 - just for me, oh, yeah.
@@ -42,20 +41,20 @@
 * BREAK
 
 * Bridge
-|   A                            A7      A
+| A                            A7      A
 - She's there to love me, both day and night.
-|   A                                A7        A
+| A                                A7        A
 - Never grumbles or fusses, always treats me right.
-|   A                             A7          A
+| A                             A7          A
 - Never runnin' in the streets, leavin' me alone..
-|   A                             A7
+| A                             A7
 - she knows a woman's place, is right there, now, in the home.
 |        D               E
 - I got a woman, way over town,
 |              A   D   A
 - she's good to me, oh, yeah.
 
-* Verse 4
+* Verse
 |              D
 - Said I got a woman, way over town,
 |              E   E7  E
@@ -70,9 +69,9 @@
 - She's good to me, oh, yeah.
 
 * OUTRO
-|   A                                     A7
+| A                                     A7
 - Well, don't you know she's all right?
-|   A                                     A7
+| A                                     A7
 - Well, don't you know she's all right?
-|   A                                A7
+| A                                A7
 - She's all right, she's all right...(Fade.)

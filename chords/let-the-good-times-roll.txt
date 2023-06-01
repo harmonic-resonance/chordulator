@@ -1,7 +1,6 @@
-* Let the Good Times Roll
-  title: Let the Good Times Roll
-  performer: Ray Charles
-  youtube: Lk4iOmb-osk
+:title: Let the Good Times Roll
+:performer: Ray Charles
+:youtube: Lk4iOmb-osk
 
 * Verse 1
 | G

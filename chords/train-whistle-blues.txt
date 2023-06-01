@@ -1,6 +1,5 @@
-* Train Whistle Blues
-    title: Train Whistle Blues
-    subtitle: Jimmy Rodgers
+:title: Train Whistle Blues
+:performer: Jimmy Rodgers
 
 * Verse
 |   A

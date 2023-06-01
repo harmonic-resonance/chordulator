@@ -1,0 +1,56 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.print body {
+  background-color: white;
+  color: black;
+}
+
+pre {
+  font-family: 'Fira Mono', monospace;
+}
+
+.line {
+  page-break-inside: avoid;
+  margin-top: 0.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.chords, .lyrics {
+  margin: 0;
+}
+
+.chords {
+  color: red;
+  font-weight: bold;
+}
+
+section {
+  margin-top: 2em;
+}
+
+/* Styles for Print */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .print body {
+    background-color: black;
+    color: white;
+  }
+}
+

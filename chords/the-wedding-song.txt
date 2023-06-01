@@ -1,10 +1,9 @@
-* The Wedding Song
-  title: The Wedding Song
+:title: The Wedding Song
 
-* Verse 1
+* Verse
 | D               A                 G              D
 - He is now to be among you at the calling of your hearts
-| D                              A  
+| D                              A
 - Rest assure this troubadour is acting on His part
 | D                 A                 G              D
 - The union of your spirits here has caused Him to remain
@@ -13,10 +12,10 @@
 |           G              D   E7 G D
 - there is love, there is love
 
-* Verse 2
+* Verse
 | D                           A              G             D
 - Well, a man shall leave his mother and a woman leave her home
-| D                                A 
+| D                                A
 - They will travel on to where the two shall be as one
 | D                A             G             D
 - As it was in the beginning, is now until the end
@@ -37,12 +36,12 @@
 |          G                  D   G E7 D
 - There is love, oh, there is love
 
-* Verse 3
+* Verse
 | (Hum first two lines of Verse 3 using same chord sequence as in verse 1)
 | D A G D
 | D A G D
 
-| D                       A                 G             D             
+| D                       A                 G             D
 - Oh the marriage of your spirits here has caused Him to remain
 | D                                    A
 - For whenever two or more of you are gathered in His name

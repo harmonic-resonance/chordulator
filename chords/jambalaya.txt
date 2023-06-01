@@ -1,9 +1,8 @@
-* Jambalaya
-    title: Jambalaya
-    performer: Hank Williams
+:title: Jambalaya
+:performer: Hank Williams
 
-* Verse 1
-|   C                                  G
+* Verse
+| C                                  G
 - Goodbye, Joe, me gotta go, me oh my oh.
 |                                       C
 - Me gotta go, pole the pirogue down the bayou.
@@ -13,7 +12,7 @@
 - Son of a gun, we'll have big fun on the bayou.
 
 * Chorus
-|   C                                           G
+| C                                           G
 - Well jambalaya and a crawfish pie and filé gumbo
 |                                       C
 - Cause tonight I'm gonna see my ma cher amio.
@@ -22,8 +21,8 @@
 |                                         C
 - Son of a gun, we'll have big fun on the bayou.
 
-* Verse 2
-|   C                                    G
+* Verse
+| C                                    G
 - Thibodaux, Fontaineaux, the place is buzzin',
 |                                   C
 - Kinfolk come to see Yvonne by the dozen.

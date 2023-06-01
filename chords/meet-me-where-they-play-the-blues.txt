@@ -1,11 +1,10 @@
-* Meet me where they play the Blues
-    title: Meet me where they play the Blues
-    composer: Steve Allen
+:title: Meet me where they play the Blues
+:composer: Steve Allen
 
 * Intro
 |G  B7  Em7   G7   C   Cm
 
-* Verse 1
+* Verse
 |D  D9 D   G          G6      F          Dm7       G       G7
 - I got a heart that's broken heart - ed, how do I mend it?
 |         C9            G/B               C7      D7
@@ -15,7 +14,7 @@
 | G        B7        E7 Bm7-5 Am7   D7
 - Meet me where they play the blues.
 
-* Verse 2
+* Verse
 | D   D9   D    G           G6        F       Dm7       G       G7
 - Peo- ple have said they've seen you dance in hideaway places;
 |  G          C9            G/B                   C7      D7
@@ -35,7 +34,7 @@
 | Am7         Cdim          D7
 - Hopin' you'll happen this way.
 
-* Verse 3
+* Verse
 | D   D9     D    G       G6       F       Dm7          G       G7
 - I'm get - tin' tired of sippin' wine and watchin' it bubble;
 | G           C9               G/B                   C7      D7
@@ -47,7 +46,7 @@
 
 * Break - Verse
 
-* Verse 4
+* Verse
 | D   D9     D    G       G6       F       Dm7          G       G7
 - I'm get - tin' tired of sippin' wine and watchin' it bubble;
 | G           C9               G/B                   C7      D7

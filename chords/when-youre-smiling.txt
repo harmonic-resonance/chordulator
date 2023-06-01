@@ -1,14 +1,12 @@
-* When You're Smiling
-    title: When You're Smiling
-    composer: Joe Goodwin, Larry Shay, Mark Fisher
-    youtube: YXYRkp2HZto
+:title: When You're Smiling
+:composer: Joe Goodwin, Larry Shay, Mark Fisher
+:youtube: YXYRkp2HZto
 
 * Verse
 |   G                                Gmaj7
 - When you're smiling when you're smiling
 |                   E7          Am
 - The whole world smiles with you
-
 |   G                                Gmaj7
 - When you're laughing oh when you're laughing
 |       E7                Am
