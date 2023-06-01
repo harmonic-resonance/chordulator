@@ -1,54 +1,52 @@
-* She Caught the Katy
-    title: She Caught the Katy
-    performer: Taj Mahal
+:title: She Caught the Katy
+:performer: Taj Mahal
+:capo: 1
+:key: Bb
 
-CAPO 1
-actual key Bb
-
-* Verse 1
-|   A                   E                      A
+* Verse
+| A                    E                      A
 - She caught the katy, left me a mule to ride
-|   A                   E                      A
+| A                    E                      A
 - She caught the katy, left me a mule to ride
-|   A
+| A
 - She caught the katy, left me a mule to ride
-|   D                               Dm
+| D                               Dm
 - The train pulled out and I swung on behind
-|   A                    E                         A
+| A                    E                         A
 - Crazy 'bout her, that hard-headed woman of mine
 
-* Verse 2
-|   A                   E                      A
+* Verse
+| A                  E                      A
 - Man, my baby long. Great God, she mighty, my baby tall
-|   A                   E                      A
+| A                      E                      A
 - You know my baby long. Great God, she mighty, my baby tall
-|   A
+| A
 - Well, my baby, she long. My baby, she tall.
-|   D                               Dm
+| D                               Dm
 - She sleeps with her head in the kitchen
-|   Dm
+| Dm
 - And her feet are out in the hall
-|   A                    E                         A
+| A                    E                         A
 - Crazy 'bout her, that hard-headed woman of mine
 
 * Bridge
-|           D
+|         D
 - Well, I love my baby. She's so fine
-|   A
+| A
 - Wish she'd come and see me sometime
 |           G
 - She don't believe I love her, look what a hole I'm in
 |           E
 - She don't believe I'm sinking, look what shape I'm in
 
-* Verse 1
-|   A                   E                      A
+* Verse
+| A                    E                      A
 - She caught the katy, left me a mule to ride
-|   A                   E                      A
+| A                    E                      A
 - She caught the katy, left me a mule to ride
-|   A
+| A
 - She caught the katy, left me a mule to ride
-|   D                               Em
+| D                               Em
 - The train pulled out and I swung on behind
-|   A                    E                  D                        A
+| A                     E                  D                        A
 - Crazy 'bout her, that hard-headed woman, hard-headed woman of mine

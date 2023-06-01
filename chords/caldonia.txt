@@ -1,10 +1,11 @@
-* Caldonia
-    title: Caldonia
-    performer: Louis Jordan
-    youtube: PR6pHtiNT_k
+:title: Caldonia
+:performer: Louis Jordan
+:youtube: PR6pHtiNT_k
+
+* Intro
+|   C    F    C    G    C
 
 * Verse
-|   C    F    C    G    C
 |   C
 - Walkin' with my baby she's got great big feet
 |   F                            C
@@ -22,8 +23,10 @@
 |   G                                      C
 - Crazy 'bout that woman 'cause Caldonia is her name
 
-* Verse
+* Break
 |   C    F    C    G    C
+
+* Verse
 |   C
 - Now, my mamma told me to leave Caldonia alone
 |   F                                         C
