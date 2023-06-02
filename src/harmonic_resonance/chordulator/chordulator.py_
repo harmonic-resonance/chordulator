@@ -1,5 +1,4 @@
 import pkg_resources
-import re
 
 def generate_chord_sheet_html(chord_sheet):
     lines = chord_sheet.strip().split("\n")
@@ -59,9 +58,7 @@ def generate_chord_sheet_html(chord_sheet):
             if open_line:
                 output += "</div>\n"
             output += '<div class="line">\n'
-            chord_line = line[1:]
-            chord_line_with_spans = re.sub(r"([A-G][#b]?(?:sus|maj|min|dim|aug)?\d?(?:\/[A-G][#b]?)?)", r'<span class="chord">\1</span>', chord_line)
-            output += f'<pre class="chords">{chord_line_with_spans}</pre>\n'
+            output += f'<pre class="chords">{line[1:]}</pre>\n'
             open_line = True
         elif line.startswith("-"):
             if not open_line:
@@ -84,4 +81,3 @@ def generate_chord_sheet_html(chord_sheet):
     output += "</body>\n</html>"
 
     return output
-
