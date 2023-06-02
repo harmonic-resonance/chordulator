@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-for txt_file in *.txt; do
-    chordulator "$txt_file"
+for csml_file in *.csml; do
+    chordulator "$csml_file"
 done
