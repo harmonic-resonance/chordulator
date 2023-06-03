@@ -33,11 +33,17 @@ h2 {
 }
 
 .chords {
-  color: red;
+  color: #444;
+  font-weight: bold;
+}
+
+.chord {
+  color: #F90;
   font-weight: bold;
 }
 
 section {
+  border-top: 2px #444 solid;
   margin-top: 2em;
 }
 
