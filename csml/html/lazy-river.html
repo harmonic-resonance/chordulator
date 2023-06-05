@@ -51,6 +51,28 @@ section {
   margin-top: 2em;
 }
 
+.chord-table {
+  /* font-family: 'Fira Sans', sans-serif; */
+  margin-top: .5em;
+}
+.chord-section {
+  margin-top: 2em;
+}
+.chord-line {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, auto);
+  grid-auto-flow: column;
+
+}
+
+.chord-line > pre {
+  padding: 10px;
+  margin: 0;
+  font-size: 2em;
+  border: 1px solid #444;
+}
+
 /* Styles for Print */
 @media print {
   body {
@@ -68,9 +90,13 @@ section {
 </style>
 </head>
 <body>
+<header>
 <h1>Lazy River</h1>
 <ul><li>composer: Hoagy Carmichael</li>
-<li>youtube: Snv8K4CeSPA</li></ul><section class="intro">
+<li>youtube: Snv8K4CeSPA</li></ul></header>
+
+<div class="lines">
+<section class="intro">
 <h2>Intro</h2>
 <div class="line">
 <pre class="chords"> <span class="chord">G</span>     |<span class="chord">E</span></pre>
@@ -115,5 +141,40 @@ section {
 <pre class="chords"> <span class="chord">A</span>          |<span class="chord">D</span>         |<span class="chord">G</span>       |</pre>
 <pre class="lyrics"> Up the lazy river with me</pre>
 </section>
+</div>
+<div class="chord-table">
+<div class="chord-section">
+<h2>Intro</h2>
+<div class="chord-line">
+<pre class="chord"> G     </pre>
+<pre class="chord">E</pre>
+</div>
+</div>
+<div class="chord-section">
+<h2>Verse</h2>
+<div class="chord-line">
+<pre class="chord"> E          </pre>
+<pre class="chord">               </pre>
+<pre class="chord">E7     </pre>
+<pre class="chord"></pre>
+<pre class="chord"> A                  </pre>
+<pre class="chord">             </pre>
+<pre class="chord">A7     </pre>
+<pre class="chord"></pre>
+<pre class="chord"> C         </pre>
+<pre class="chord">C7       </pre>
+<pre class="chord">G            </pre>
+<pre class="chord">E</pre>
+<pre class="chord"> A          </pre>
+<pre class="chord">D         </pre>
+<pre class="chord">G             </pre>
+<pre class="chord">E</pre>
+<pre class="chord"> A          </pre>
+<pre class="chord">D         </pre>
+<pre class="chord">G       </pre>
+<pre class="chord"></pre>
+</div>
+</div>
+</div>
 </body>
 </html>

@@ -4,7 +4,7 @@ run the main app
 import click
 from pathlib import Path
 from rich import print, inspect
-from .chordulator import generate_web_page
+from .chordulator import generate_chord_sheet_html
 
 @click.command()
 @click.argument('csml_filename')
@@ -23,10 +23,9 @@ def run(csml_filename):
     output_file = output_file_path.with_suffix('.html')
     # Create the html subfolder if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    html_output = generate_web_page(chord_sheet)
+    html_output = generate_chord_sheet_html(chord_sheet)
     output_file.write_text(html_output)
     print(output_file)
 
 if __name__ == '__main__':
     run()
-
