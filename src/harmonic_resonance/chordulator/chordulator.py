@@ -1,4 +1,5 @@
 import pkg_resources
+from rich import print, inspect
 import re
 
 
@@ -56,45 +57,6 @@ def generate_lines(lines):
     return output
 
 
-#  def generate_chord_sheet_html(chord_sheet):
-    #  lines = chord_sheet.strip().split("\n")
-
-    #  # Parse field statements
-    #  fields = {}
-    #  for line in lines:
-        #  if line.startswith(":"):
-            #  key, value = line[1:].split(":", 1)
-            #  fields[key.strip()] = value.strip()
-
-    #  title = fields.get("title", "Chord Sheet")
-
-    #  css_path = pkg_resources.resource_filename(
-        #  "harmonic_resonance.chordulator", "styles.css"
-    #  )
-    #  with open(css_path) as css_file:
-        #  css_contents = css_file.read()
-
-    #  output = f"""\
-#  <header>
-#  <h1>{title}</h1>
-#  """
-
-    #  # Add fields (excluding title) as key-value list
-    #  fields_list = [
-        #  f"<li>{key}: {value}</li>" for key, value in fields.items() if key != "title"
-    #  ]
-    #  if fields_list:
-        #  output += "<ul>"
-        #  output += "\n".join(fields_list)
-        #  output += "</ul>"
-
-    #  output += "\n</header>\n"
-
-    #  output += generate_lines(lines)
-
-    #  output += "</div>\n"
-
-    #  return output
 
 
 def parse_csml_chord_table(csml):
@@ -108,8 +70,10 @@ def parse_csml_chord_table(csml):
             current_section = line[1:].strip()
             chord_table[current_section] = []
         elif line.startswith("|"):
-            chords = line[1:].split("|")
-            chord_table[current_section].extend(chords)
+            
+            bars = line[1:].split("|")
+            chords = [bar.split() for bar in bars]
+            chord_table[current_section].extend([chords])
 
     return chord_table
 
@@ -117,12 +81,17 @@ def parse_csml_chord_table(csml):
 def generate_chord_table_html(chord_table):
     output = '<div class="chord-table">\n'
 
-    for section, chords in chord_table.items():
-        output += f'<div class="chord-section">\n<h2>{section}</h2>\n'
-        output += '<div class="chord-line">\n'
-        for chord in chords:
-            output += f'<pre class="chord">{chord}</pre>\n'
-        output += "</div>\n</div>\n"
+    for section, chord_lines in chord_table.items():
+        output += f'  <section class="chord-table-section">\n'
+        output += f'    <h2>{section}</h2>\n'
+        output += f'    <table class="chord-section">\n'
+        for chord_line in chord_lines:
+            output += '      <tr class="chord-line">\n'
+            for bar in chord_line:
+                output += f'        <td class="chord">{" ".join(bar)}</td>\n'
+            output += "      </tr>\n"
+        output += "    </table>\n"
+        output += f'  </section>\n'
 
     output += "</div>\n"
 
@@ -175,6 +144,7 @@ def generate_web_page(chord_sheet):
     output += generate_lines(lines)
 
     chord_table = parse_csml_chord_table(chord_sheet)
+    print(chord_table)
     output += generate_chord_table_html(chord_table)
 
     output += "</body>\n</html>"
