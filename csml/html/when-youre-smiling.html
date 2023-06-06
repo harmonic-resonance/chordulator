@@ -37,7 +37,7 @@ h2 {
 }
 
 .chords {
-  color: #999;
+  color: #444;
   font-weight: bold;
 }
 
@@ -47,9 +47,30 @@ h2 {
 }
 
 section {
-  border-top: 2px #333;
+  border-top: 2px #444 solid;
   margin-top: 2em;
 }
+
+.chord-table {
+  /* font-family: 'Fira Sans', sans-serif; */
+  margin-top: .5em;
+}
+.chord-section {
+  margin-top: 2em;
+}
+
+/* .chord-line { */
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, auto); */
+  /* grid-auto-flow: column; */
+/* } */
+
+/* .chord-line > pre { */
+  /* padding: 10px; */
+  /* margin: 0; */
+  /* font-size: 2em; */
+  /* border: 1px solid #444; */
+/* } */
 
 /* Styles for Print */
 @media print {
@@ -64,47 +85,134 @@ section {
   }
 }
 
+.chord-table-section td {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 2em;
+  padding: .25em;
+  min-width: 100px;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table, th, td{
+  border: 1px solid #444;
+  border-collapse: collapse;
+}
 
 </style>
 </head>
 <body>
+<header>
 <h1>When You're Smiling</h1>
 <ul><li>composer: Joe Goodwin, Larry Shay, Mark Fisher</li>
-<li>youtube: YXYRkp2HZto</li></ul><section class="verse">
+<li>youtube: YXYRkp2HZto</li></ul></header>
+
+<div class="lines">
+<section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">G</span>                                <span class="chord">Gmaj7</span></pre>
-<pre class="lyrics"> When you're smiling when you're smiling</pre>
+<pre class="chords"> <span class="chord">Am</span>         |<span class="chord">D7</span>         |<span class="chord">G</span>        |</pre>
+<pre class="lyrics">                                        When you're</pre>
+</section>
+<section class="verse">
+<h2>Verse</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">G</span>      |<span class="chord">G</span>            |<span class="chord">Gmaj7</span>      |</pre>
+<pre class="lyrics"> smi- ling when you're smi- ling.       The</pre>
 </div>
 <div class="line">
-<pre class="chords">                   <span class="chord">E7</span>          <span class="chord">A</span>m</pre>
-<pre class="lyrics"> The whole world smiles with you</pre>
+<pre class="chords"> <span class="chord">E7</span>         |           |<span class="chord">Am</span>       |</pre>
+<pre class="lyrics"> whole world smiles with you.           When you're</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">G</span>                                <span class="chord">Gmaj7</span></pre>
-<pre class="lyrics"> When you're laughing oh when you're laughing</pre>
+<pre class="chords"> <span class="chord">G</span>       |              |<span class="chord">Gmaj7</span>    |</pre>
+<pre class="lyrics"> laughing oh when you're laughing.      The</pre>
 </div>
 <div class="line">
-<pre class="chords">       <span class="chord">E7</span>                <span class="chord">A</span>m</pre>
-<pre class="lyrics"> The sun comes shining through</pre>
+<pre class="chords"> <span class="chord">E7</span>       |         |<span class="chord">Am</span>           |</pre>
+<pre class="lyrics"> sun comes shin- ing through.           But when you're</pre>
 </section>
 <section class="bridge">
 <h2>Bridge</h2>
 <div class="line">
-<pre class="chords">                   <span class="chord">G7</span>          <span class="chord">C</span></pre>
-<pre class="lyrics"> But when you're crying you bring on the rain</pre>
+<pre class="chords"> <span class="chord">G7</span>        |<span class="chord">C</span>           |         |</pre>
+<pre class="lyrics"> crying you bring on the rain.          So stop your</pre>
 </div>
 <div class="line">
-<pre class="chords">                <span class="chord">A7</span>         <span class="chord">D7</span></pre>
-<pre class="lyrics"> So stop your sighing be happy again</pre>
+<pre class="chords"> <span class="chord">A7</span>         |<span class="chord">D7</span>         |         |</pre>
+<pre class="lyrics"> sighing and be happy a- gain.          Just keep on</pre>
 </div>
 <div class="line">
-<pre class="chords">           <span class="chord">G</span>                         <span class="chord">E7</span></pre>
-<pre class="lyrics"> Keep on smiling cause when you're smiling</pre>
+<pre class="chords"> <span class="chord">G</span>      |                   |<span class="chord">E7</span>       |</pre>
+<pre class="lyrics"> smi- ling cause when you're smiling.   The</pre>
 </div>
 <div class="line">
-<pre class="chords">       <span class="chord">A</span>m          <span class="chord">D7</span>          <span class="chord">G</span></pre>
-<pre class="lyrics"> The whole world smiles with you</pre>
+<pre class="chords"> <span class="chord">Am</span>         |<span class="chord">D7</span>         |<span class="chord">G</span>        |</pre>
+<pre class="lyrics"> whole world smiles with you.</pre>
 </section>
+</div>
+<div class="chord-tables">
+  <section class="chord-table-section">
+    <h2>Verse</h2>
+    <table>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord">G</td>
+        <td class="chord">Gmaj7</td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">E7</td>
+        <td class="chord"></td>
+        <td class="chord">Am</td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord"></td>
+        <td class="chord">Gmaj7</td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">E7</td>
+        <td class="chord"></td>
+        <td class="chord">Am</td>
+        <td class="chord"></td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Bridge</h2>
+    <table>
+      <tr>
+        <td class="chord">G7</td>
+        <td class="chord">C</td>
+        <td class="chord"></td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">A7</td>
+        <td class="chord">D7</td>
+        <td class="chord"></td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord"></td>
+        <td class="chord">E7</td>
+        <td class="chord"></td>
+      </tr>
+      <tr>
+        <td class="chord">Am</td>
+        <td class="chord">D7</td>
+        <td class="chord">G</td>
+        <td class="chord"></td>
+      </tr>
+    </table>
+  </section>
+</div>
 </body>
 </html>
