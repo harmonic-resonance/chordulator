@@ -54,20 +54,19 @@ section {
 .chord-section {
   margin-top: 2em;
 }
-.chord-line {
-  display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  grid-template-columns: repeat(4, auto);
-  grid-auto-flow: column;
 
-}
+/* .chord-line { */
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, auto); */
+  /* grid-auto-flow: column; */
+/* } */
 
-.chord-line > pre {
-  padding: 10px;
-  margin: 0;
-  font-size: 2em;
-  border: 1px solid #444;
-}
+/* .chord-line > pre { */
+  /* padding: 10px; */
+  /* margin: 0; */
+  /* font-size: 2em; */
+  /* border: 1px solid #444; */
+/* } */
 
 /* Styles for Print */
 @media print {
@@ -82,3 +81,19 @@ section {
   }
 }
 
+.chord-table-section td {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 2em;
+  padding: .25em;
+  min-width: 100px;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table, th, td{
+  border: 1px solid #444;
+  border-collapse: collapse;
+}

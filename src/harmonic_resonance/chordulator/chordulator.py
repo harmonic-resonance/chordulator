@@ -17,7 +17,8 @@ def generate_lines(lines):
             if open_section:
                 output += "</section>\n"
             section_name = line[1:].strip()
-            section_class = section_name.lower().replace(" ", "-")
+            #  section_class = section_name.lower().replace(" ", "-")
+            section_class = section_name.lower()
             output += f'<section class="{section_class}">\n'
             output += f"<h2>{section_name}</h2>\n"
             open_section = True
@@ -57,8 +58,6 @@ def generate_lines(lines):
     return output
 
 
-
-
 def parse_csml_chord_table(csml):
     lines = csml.strip().split("\n")
     chord_table = {}
@@ -70,7 +69,6 @@ def parse_csml_chord_table(csml):
             current_section = line[1:].strip()
             chord_table[current_section] = []
         elif line.startswith("|"):
-            
             bars = line[1:].split("|")
             chords = [bar.split() for bar in bars]
             chord_table[current_section].extend([chords])
@@ -79,19 +77,19 @@ def parse_csml_chord_table(csml):
 
 
 def generate_chord_table_html(chord_table):
-    output = '<div class="chord-table">\n'
+    output = '<div class="chord-tables">\n'
 
     for section, chord_lines in chord_table.items():
         output += f'  <section class="chord-table-section">\n'
-        output += f'    <h2>{section}</h2>\n'
-        output += f'    <table class="chord-section">\n'
+        output += f"    <h2>{section}</h2>\n"
+        output += f"    <table>\n"
         for chord_line in chord_lines:
-            output += '      <tr class="chord-line">\n'
+            output += "      <tr>\n"
             for bar in chord_line:
                 output += f'        <td class="chord">{" ".join(bar)}</td>\n'
             output += "      </tr>\n"
         output += "    </table>\n"
-        output += f'  </section>\n'
+        output += f"  </section>\n"
 
     output += "</div>\n"
 
