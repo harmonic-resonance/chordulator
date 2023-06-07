@@ -1,0 +1,342 @@
+﻿Fiddle Tunes Cheat Sheet.  
+Most have two parts (Part A, Part B).  Using notation in parentheses below.
+( Full Size: Full Measure; Half Size: Half Measure; “/” Repeat Measure; “:||” Repeat Part A or B )
+
+Frosty Morn:
+Am/ G/ Am/ AmG Am :||        A/ G/ Am/ AmG Am :||
+
+Bonaparte Crossing The Rockies:
+Am CG Am G CG Am AmG Am :||
+ A AG Am G   Am CG AmG Am :||  
+
+Kitchen Girl:
+AG  A/ E     AG A GE A :||          AG A/ E     AG A G A :||
+John Hardy: 
+GC CF CG7 G7  G7C CF CG7 G7 G7C CF CG7 G7 |       G/// G/// |
+Muddy Roads:
+G/ F/   G/ F G :||     G C F G   G C F G :||
+South Wind (¾)
+G/ D7/   G C G/ :||   G C G/  G Em Am D7 C/ G Em  G D7 G/
+Sandy River Belle’s:
+G GC G GD   G GC GC DG :||     G// D GC DG :|| 
+Cherokee Shuffle
+G// Em   C G CD G :||   C G C G    C G Em/ CD G :||
+June Apple:
+G/ F/   G/ F G :||      G/ F C   G/ F DG :||
+Salt Creek
+G GC F FD     G GC F DG :||    G/ F D   G/ F DG :||
+Scotland The Brave
+G///  C G A7 D, G///  C G D G, D/ G/ G D A D, G///  C G D G ||
+Turkey In The Straw
+G// D  G// D7G :||     G/ C/ G// D7G :||  
+
+Little Beggarman:--------------------------------------------------------------------------------------------------------------------------------------
+G GC  G F   G GC  G DG :||   F C G F    G GC  G DG :||
+
+Temperance Reel
+G/ Em D   G/ Em DG :||   Em/ D/    Em/ C DG :||
+
+Minstrel Boy
+G    Em        G … D7-G :||  Em … Bm        Em … C-D7-G    G  …  C   G  … D7 G 
+Liberty:
+D/ G/  D/ A D :||   D// A  D/ A D :|| 
+
+The Girl I Left Behind Me:---------------------------------------------------------------------------------------------------
+G C G D   G C D G :||  G// GD     G C D G :||
+
+Chicken Reel:--------------------------------------------------------------------------------------------------------------------
+G// DG  G// DG :||   G// DG  G// DG :||
+
+Blackberry Blossom:
+GD CG CG AD    GD CG CG DG  :||    Em// B7   Em/ CG DG :||
+
+Dixie Hoedown:
+G C G D  G C GD G  G Bm Am G  D/ G G :||   GD G ||
+
+Boys of Blue Hill
+D GA D E7A7     D GA DA D :||   D GA D E7A7     D GA DA D :||
+
+Harvest Home
+D/ A DA     D/ A DAD   :||     AD AD A EA    D/ A DAD   :||
+
+Miss McLeod’s Reel----------------------------------------------------------------------------------------------------------------------------------
+G// D  G/ C GD  :||    G// D  G/ C GD  :||
+
+A// E   A/ D AE  :||    A// E   A/ D AE  :||
+
+Devil’s Dream-------------------------------------------------------------------------------------------------------------------------------------------
+A/ Bm BmE7   A/ Bm E7A  :||   A/ Bm BmE7   A/ Bm A :||
+
+A /// E///  :||     A /// E///  :||
+
+Over The Waterfall
+D///  D/ C G :||  D///  D/AD :||       
+Old Joe Clark
+A//E  A/AE A:||  A//G A/AEA:||
+Sailor’s Hornpipe
+G/ A D  G C D G :||   G C A D   G C D G :||
+
+D/ E A   D G A D :||   D G E A    D G A D :||  
+
+Fisher’s Hornpipe
+GC GC  GC GD   GC  GC  GD   G :||   D G D AD   C G CD  G :||
+
+Jigs:
+
+Irish Washer Woman
+D7 G/ D7/   G/ D7 G :||   G/ D/ CG  D7G  D7 G :||
+Gary Owen
+G G-- G D--    G G-- G D--:||  G/ C/ G/ G D :| 
+Saddle The Pony
+G GC G D7   G GC GD7 G :||  C G C D7   C G CD7 G :||
+Kesh Jig:
+G D G GD    G D G DG  :||    G CG  G D    G CG GD G :||
+Swallow Tail Jig
+Em/ D/   Em/ D Em :||    Em// EmD   Em/ D Em :||
+
+
+
+Loch Lomond
+
+
+By yon bonnie banks and by yon bonnie braes
+
+Where the sun shines bright on Loch Lomond 
+
+Where me and my true love were ever wont to gae
+
+On the bonnie bonnie banks of Loch Lomond
+
+CHORUS:
+
+
+Oh, ye'll tak' the high road an' I'll tak' the low road 
+
+And I'll be in Scotland afore ye 
+
+For me and my true love will never meet again
+
+On the bonnie, bonnie banks of Loch Lomond
+
+We'll meet where we parted in yon shady glen 
+On the steep steep side of Ben Lomond 
+Where in purple hue the hielands we view 
+And the moon looks out frae the gloamin'
+
+CHORUS
+
+Still fair is the scene but ah how changed 
+Are the hopes that we fondly cherished 
+Like a wat'ry gleam like a morning dream 
+On Cullodens field they ha'e perrished
+
+CHORUS
+
+The wild flowers spring and the wee birds sing 
+And in sunshine the waters are sleepin'
+But the broken heart a kens nae second spring 
+And resign'd we may be tho' we're greetin'
+
+CHORUS
+
+
+The Minstrel Boy
+
+    C                           Am
+The minstrel boy to the war has gone
+       C                       G7    C
+In the ranks of death you will find him
+    C                            Am
+His father's sword he has girded on,
+        C                  G7   C
+And his wild harp slung be-hind him
+Am                       Em
+“Land of song,” said the warrior bard
+       Am               F   G7  C
+Though all the world be-tra-ay  thee
+    C                               F
+One sword at least thy rights shall guard,
+     C                  G7      C
+One faithful harp shall praise thee
+
+
+Instrumental Verse
+
+    C                              Am
+The minstrel fell but the foeman's chain
+          C                    G7  C
+Could not bring his proud soul un-der
+    C                            Am
+The harp he loved ne'er spoke a-gain,
+        C                  G7  C
+For he tore it's chords a-sun-der
+    Am                     Em
+And said, "no chains shall sul-ly thee,
+      Am               F   G7 C
+Thou soul of love and bra-ver-y!
+    C                                F
+Thy songs were made for the pure and free,
+           C               G7      C
+They shall ne-ver sound in sla-ver-y."
+
+
+
+Danny Boy
+
+
+Oh Danny boy, the pipes, the pipes are calling 
+
+From glen to glen, and down the mountain side 
+
+The summer's gone, and all the flowers are dying 
+
+'tis you, 'tis you must go and I must bide. 
+
+CHORUS
+
+But come you back when summer's in the meadow 
+
+Or when the valley's hushed and white with snow 
+
+'tis I'll be there in sunshine or in shadow 
+
+Oh Danny boy, oh Danny boy, I love you so.
+
+ 
+And if you come, when all the flowers are dying 
+And I am dead, as dead I well may be 
+You'll come and find the place where I am lying 
+And kneel and say an "Ave" there for me. 
+
+And I shall hear, tho' soft you tread above me 
+And all my dreams will warm and sweeter be 
+If you'll not fail to tell me that you love me 
+I simply sleep in peace until you come to me. 
+
+Chords: KEY D
+verse: 
+D D G G
+G D D A7
+D D G G
+G D A7 D
+
+chorus:
+D D G-A7-D
+D D G-A7-D
+D D G-A7-D
+D D G-A7-D
+
+Star Of The County Down
+
+
+        Em                     G      D         G       Em   D
+Near to Banbridge town, in the County Down, one morning in July
+       Em                  G          D          G             C      D  Em
+Down a boreen green came a sweet colleen and she smiled as she passed me by
+    G                       Am                    G            Em        D
+She looked so neat from her two white feet to the sheen of her nut-brown hair
+         Em                  G        D            Em         C   D    Em
+Sure the coaxing elf, I'd to shake myself, to make sure I was standing there
+
+
+CHORUS:
+	     G                Am                  G         Em     D
+	From Bantry Bay up to Derry Quay and from Galway to Dublin town
+	    Em                     G          D         Em     C   D  Em
+	No maid I've seen like the sweet colleen that I met in County Down
+
+
+As she onward sped, sure I shook my head and I gazed with a feeling quare
+And I said, says I to a passer-by, who's the maid with the nut-brown hair?
+He smiled at me and with pride says he, that's the gem of Irelands crown
+She's young Rosie McCann from the banks of the Bann, she's the star of the County Down 
+
+CHORUS:
+
+She'd a soft brown eye and a look so sly and a smile like the rose in June
+And you held each note from her lily-white throat, as she lilted an Irish tune
+At the pattern dance you were in trance as she tripped through a jig or reel
+When her eyes she'd roll, she would lift soul as your heart she would likely steal
+
+CHORUS:
+
+At the harvest fair she'll be surely there and I'll dress my Sunday clothes
+With my shoes shon bright and my hat cocked right for a smile from the nut-brown Rose
+No pipe I smoke, no horse I'll yoke, let my plough with the rust turns brown
+Till a smiling bride  by my own fireside sits the star of the County Down
+
+CHORUS:
+
+
+The Water is Wide
+
+     G               C            G  
+The water is wide,  I cannot get  over, 
+                    C          D7  
+And neither have I  wings to   fly. 
+           Bm             Em  
+Give me a  boat that can  carry two, 
+C               D7                G   
+And both shall  row, my love and  I. 
+
+A ship there is and she sails the sea,
+She's loaded deep as deep can be.
+But not so deep as the love I'm in,
+And I know not how I sink or swim.
+
+
+I leaned my back up against some young oak,
+Thinking he was a trusty tree.
+But first he bended, and then he broke,
+And thus did my false love to me.
+
+
+I put my hand into some soft bush,
+Thinking the sweetest flower to find.
+I pricked my finger to the bone,
+And left the sweetest flower  alone.
+
+
+Oh, love is handsome and love is fine,
+Gay  as a jewel when first  it is new,
+But love grows old, and waxes cold,
+And fades away like summer dew.
+
+
+Annie Laurie
+
+
+Maxwellton's braes are bonnie,
+
+Where early fa's the dew,
+
+And it's there that Annie Laurie
+
+Gave me her promise true
+
+Gave me her promise true,
+
+Which ne'er forgot will be,
+
+And for bonnie Annie Laurie
+
+I'd lay me doon and dee.
+
+
+Her brow is like the snowdrift,
+Her throat is like the swan,
+Her face is the fairest
+That e'er the sun shone on.
+That e'er the sun shone on,
+And dark blue is her e'e,
+And for bonnie Annie Laurie,
+I'd lay me doon and dee.
+
+Like dew on the gowan lying
+Is the fa' o' her fairy feet.
+And like winds in the summer sighing,
+Her voice is low and sweet.
+Her voice is low and sweet,
+And she's a' the world to me,
+And for bonnie Annie Laurie,
+I'd lay me doon and dee.
