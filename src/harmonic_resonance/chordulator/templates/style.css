@@ -1,4 +1,9 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap'); */
+
 body {
+  /* font-family: 'Fira Mono', monospace; */
+  font-family: 'Fira Sans Condensed', sans-serif;
   margin: 0;
   padding: 0;
   background: black;
@@ -6,7 +11,7 @@ body {
 }
 iframe {
   border: none;
-  background: #444;
+  background: #000;
   width: 75%;
   height: 100vh;
 }
@@ -20,6 +25,6 @@ nav a {
   text-decoration: none;
 }
 nav a.selected {
-  color: #ff6347; /* tomato */
+  color: #F90;
 }
 

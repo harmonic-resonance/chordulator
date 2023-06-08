@@ -145,6 +145,22 @@ def generate_web_page(chord_sheet):
     print(chord_table)
     output += generate_chord_table_html(chord_table)
 
-    output += "</body>\n</html>"
+    output += """
+<script>
+var sectionIndex = 0;
+var sections = document.getElementsByTagName('section');
+
+window.addEventListener('message', function(event) {
+  if (event.data.action === 'scrollSection') {
+    sectionIndex += event.data.dir;
+    if (sectionIndex < 0) sectionIndex = 0;
+    if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
+    sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  }
+}, false);
+</script>
+</body>
+</html>
+"""
 
     return output

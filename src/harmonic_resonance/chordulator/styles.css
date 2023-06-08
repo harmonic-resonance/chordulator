@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   background-color: black;
   color: white;
 }

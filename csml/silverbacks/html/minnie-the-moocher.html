@@ -2,8 +2,10 @@
 <head>
 <title>Minnie the Moocher</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   background-color: black;
   color: white;
 }
@@ -362,5 +364,19 @@ table, th, td{
     </table>
   </section>
 </div>
+
+<script>
+var sectionIndex = 0;
+var sections = document.getElementsByTagName('section');
+
+window.addEventListener('message', function(event) {
+  if (event.data.action === 'scrollSection') {
+    sectionIndex += event.data.dir;
+    if (sectionIndex < 0) sectionIndex = 0;
+    if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
+    sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  }
+}, false);
+</script>
 </body>
 </html>

@@ -1,19 +1,35 @@
 var urls = {{ files_with_titles|tojson }};
 var index = 0;
 var sectionIndex = 0;
-var sections = document.getElementById('iframe').contentDocument.getElementsByTagName('section');
+
 function previous() { if (index > 0) { index--; update(); } }
 function next() { if (index < urls.length - 1) { index++; update(); } }
+
+var iframe = document.getElementById('iframe');
+// iframe.onload = function() {
+  // // Reset section index when new content is loaded
+  // sectionIndex = 0;
+  // var sections = this.contentDocument.getElementsByTagName('section');
+// };
+
 function scrollSection(dir) {
-  if (dir > 0) {
-    if (sectionIndex < sections.length - 1) { sectionIndex++; }
-  } else {
-    if (sectionIndex > 0) { sectionIndex--; }
-  }
-  sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  iframe.contentWindow.postMessage({ action: 'scrollSection', dir: dir }, '*');
 }
+
+// function scrollSection(dir) {
+  // var sections = iframe.contentDocument.getElementsByTagName('section');
+  // if (dir > 0) {
+    // console.log("up")
+    // if (sectionIndex < sections.length - 1) { sectionIndex++; }
+  // } else {
+    // console.log("down")
+    // if (sectionIndex > 0) { sectionIndex--; }
+  // }
+  // sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+// }
+
 function update() {
-  document.getElementById("iframe").src = urls[index][0];
+  iframe.src = urls[index][0];
   var links = document.querySelectorAll("nav a");
   links.forEach(function(link, i) {
     if (i === index) {
@@ -23,6 +39,7 @@ function update() {
     }
   });
 }
+
 document.querySelectorAll("nav a").forEach(function(link, i) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
@@ -40,11 +57,20 @@ window.addEventListener('keydown', function(event) {
       next();
       break;
     case 38: // up arrow
+      console.log("up")
       scrollSection(-1);
+      // iframe.onload = function() {
+        // scrollSection(-1);
+      // }
       break;
     case 40: // down arrow
+      console.log("down")
       scrollSection(1);
+      // iframe.onload = function() {
+        // scrollSection(1);
+      // }
       break;
   }
 });
 
+update();
