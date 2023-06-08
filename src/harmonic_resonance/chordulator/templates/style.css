@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  display: flex;
+}
+iframe {
+  border: none;
+  background: #444;
+  width: 75%;
+  height: 100vh;
+}
+nav {
+  width: 25%;
+  background: #111;
+  color: #ddd;
+}
+nav a {
+  color: #ddd;
+  text-decoration: none;
+}
+nav a.selected {
+  color: #ff6347; /* tomato */
+}
+

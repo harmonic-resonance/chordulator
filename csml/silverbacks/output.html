@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+    }
+    iframe {
+      width: 75%;
+      height: 100vh;
+    }
+    nav {
+      width: 25%;
+    }
+  </style>
+  <script>
+    var urls = [["html/when-youre-smiling.html", "When You\u0027re Smiling"], ["html/when-the-saints-go-marching-in.html", "When the Saints Go Marching In"], ["html/train-whistle-blues.html", "Train Whistle Blues"], ["html/she-caught-the-katy.html", "She Caught the Katy"], ["html/minnie-the-moocher.html", "Minnie the Moocher"], ["html/meet-me-where-they-play-the-blues.html", "Meet me where they play the Blues"], ["html/let-the-good-times-roll.html", "Let the Good Times Roll"], ["html/lazy-river.html", "Lazy River"], ["html/kansas-city.html", "Kansas City"], ["html/jump-jive-and-wail.html", "Jump Jive and Wail"], ["html/jambalaya.html", "Jambalaya"], ["html/i-want-to-be-like-you.html", "I Want To Be Like You"], ["html/i-got-a-woman.html", "I Got a Woman"], ["html/folson-prison-blues.html", "Folsom Prison Blues"], ["html/flip-flop-and-fly.html", "Flip, Flop and Fly"], ["html/every-day-i-have-the-blues.html", "Every Day I Have the Blues"], ["html/do-i-ever-cross-your-mind.html", "Chord Sheet"], ["html/caldonia.html", "Caldonia"]];
+    var index = 0;
+    function previous() { if (index > 0) { index--; update(); } }
+    function next() { if (index < urls.length - 1) { index++; update(); } }
+    function update() { document.getElementById("iframe").src = urls[index][0]; }
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      
+        <li><a href="html/when-youre-smiling.html" target="iframe">When You're Smiling</a></li>
+      
+        <li><a href="html/when-the-saints-go-marching-in.html" target="iframe">When the Saints Go Marching In</a></li>
+      
+        <li><a href="html/train-whistle-blues.html" target="iframe">Train Whistle Blues</a></li>
+      
+        <li><a href="html/she-caught-the-katy.html" target="iframe">She Caught the Katy</a></li>
+      
+        <li><a href="html/minnie-the-moocher.html" target="iframe">Minnie the Moocher</a></li>
+      
+        <li><a href="html/meet-me-where-they-play-the-blues.html" target="iframe">Meet me where they play the Blues</a></li>
+      
+        <li><a href="html/let-the-good-times-roll.html" target="iframe">Let the Good Times Roll</a></li>
+      
+        <li><a href="html/lazy-river.html" target="iframe">Lazy River</a></li>
+      
+        <li><a href="html/kansas-city.html" target="iframe">Kansas City</a></li>
+      
+        <li><a href="html/jump-jive-and-wail.html" target="iframe">Jump Jive and Wail</a></li>
+      
+        <li><a href="html/jambalaya.html" target="iframe">Jambalaya</a></li>
+      
+        <li><a href="html/i-want-to-be-like-you.html" target="iframe">I Want To Be Like You</a></li>
+      
+        <li><a href="html/i-got-a-woman.html" target="iframe">I Got a Woman</a></li>
+      
+        <li><a href="html/folson-prison-blues.html" target="iframe">Folsom Prison Blues</a></li>
+      
+        <li><a href="html/flip-flop-and-fly.html" target="iframe">Flip, Flop and Fly</a></li>
+      
+        <li><a href="html/every-day-i-have-the-blues.html" target="iframe">Every Day I Have the Blues</a></li>
+      
+        <li><a href="html/do-i-ever-cross-your-mind.html" target="iframe">Chord Sheet</a></li>
+      
+        <li><a href="html/caldonia.html" target="iframe">Caldonia</a></li>
+      
+    </ul>
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+  </nav>
+  <iframe id="iframe" name="iframe"></iframe>
+</body>
+</html>

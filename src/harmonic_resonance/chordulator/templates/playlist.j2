@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    {% include 'style.css' %}
+  </style>
+</head>
+<body onload="update()">
+  <nav>
+    <ul>
+      {% for file, title in files_with_titles %}
+        <li><a href="{{ file }}" target="iframe">{{ title }}</a></li>
+      {% endfor %}
+    </ul>
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+  </nav>
+  <iframe id="iframe" name="iframe"></iframe>
+  <script>
+    {% include 'script.js' %}
+  </script>
+</body>
+</html>
+

@@ -20,6 +20,7 @@ dependencies = [
 
 [project.scripts]
 chordulator = "harmonic_resonance.chordulator.app:run"
+playlister = "harmonic_resonance.chordulator.playlist_app:main"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
