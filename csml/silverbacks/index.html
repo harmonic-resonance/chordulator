@@ -77,8 +77,18 @@ nav a.selected {
   <script>
     var urls = [["html/when-youre-smiling.html", "When You\u0027re Smiling"], ["html/when-the-saints-go-marching-in.html", "When the Saints Go Marching In"], ["html/train-whistle-blues.html", "Train Whistle Blues"], ["html/she-caught-the-katy.html", "She Caught the Katy"], ["html/minnie-the-moocher.html", "Minnie the Moocher"], ["html/meet-me-where-they-play-the-blues.html", "Meet me where they play the Blues"], ["html/let-the-good-times-roll.html", "Let the Good Times Roll"], ["html/lazy-river.html", "Lazy River"], ["html/kansas-city.html", "Kansas City"], ["html/jump-jive-and-wail.html", "Jump Jive and Wail"], ["html/jambalaya.html", "Jambalaya"], ["html/i-want-to-be-like-you.html", "I Want To Be Like You"], ["html/i-got-a-woman.html", "I Got a Woman"], ["html/folson-prison-blues.html", "Folsom Prison Blues"], ["html/flip-flop-and-fly.html", "Flip, Flop and Fly"], ["html/every-day-i-have-the-blues.html", "Every Day I Have the Blues"], ["html/do-i-ever-cross-your-mind.html", "Chord Sheet"], ["html/caldonia.html", "Caldonia"]];
 var index = 0;
+var sectionIndex = 0;
+var sections = document.getElementById('iframe').contentDocument.getElementsByTagName('section');
 function previous() { if (index > 0) { index--; update(); } }
 function next() { if (index < urls.length - 1) { index++; update(); } }
+function scrollSection(dir) {
+  if (dir > 0) {
+    if (sectionIndex < sections.length - 1) { sectionIndex++; }
+  } else {
+    if (sectionIndex > 0) { sectionIndex--; }
+  }
+  sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+}
 function update() {
   document.getElementById("iframe").src = urls[index][0];
   var links = document.querySelectorAll("nav a");
@@ -96,6 +106,23 @@ document.querySelectorAll("nav a").forEach(function(link, i) {
     index = i;
     update();
   });
+});
+
+window.addEventListener('keydown', function(event) {
+  switch (event.keyCode) {
+    case 37: // left arrow
+      previous();
+      break;
+    case 39: // right arrow
+      next();
+      break;
+    case 38: // up arrow
+      scrollSection(-1);
+      break;
+    case 40: // down arrow
+      scrollSection(1);
+      break;
+  }
 });
 
   </script>
