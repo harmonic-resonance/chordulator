@@ -1,8 +1,7 @@
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
   /* @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap'); */
 
 body {
-  /* font-family: 'Fira Mono', monospace; */
   font-family: 'Fira Sans Condensed', sans-serif;
   margin: 0;
   padding: 0;
@@ -27,4 +26,14 @@ nav a {
 nav a.selected {
   color: #F90;
 }
-
+nav button {
+  color: white;
+  background: black;
+  border: none;
+  margin: 3px;
+  padding 12px;
+  width: 40%;
+}
+nav button:hover {
+  background: #444;
+}

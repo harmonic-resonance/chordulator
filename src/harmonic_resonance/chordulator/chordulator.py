@@ -29,7 +29,7 @@ def generate_lines(lines):
             output += '<div class="line">\n'
             chord_line = line[1:]
             chord_line_with_spans = re.sub(
-                r"([A-G][#b]?\w*)",
+                r"([A-G,%][#b]?\w*)",
                 r'<span class="chord">\1</span>',
                 chord_line,
             )

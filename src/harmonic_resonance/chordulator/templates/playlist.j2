@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>PLAYLISTER</title>
   <style>
     {% include 'style.css' %}
   </style>
 </head>
 <body onload="update()">
   <nav>
+    <h1>PLAYLISTER</h1>
     <ul>
       {% for file, title in files_with_titles %}
         <li><a href="{{ file }}" target="iframe">{{ title }}</a></li>
