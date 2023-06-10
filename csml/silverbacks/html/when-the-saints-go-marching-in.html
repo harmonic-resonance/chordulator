@@ -40,7 +40,7 @@ h2 {
 
 .chords {
   /* color: #F09; */
-  color: #555;
+  color: #C09;
   font-weight: bold;
 }
 
@@ -50,6 +50,7 @@ h2 {
 }
 
 section {
+  page-break-inside: avoid;
   border-top: 2px #444 solid;
   margin-top: 2em;
 }
@@ -62,18 +63,6 @@ section {
   margin-top: 2em;
 }
 
-/* .chord-line { */
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, auto); */
-  /* grid-auto-flow: column; */
-/* } */
-
-/* .chord-line > pre { */
-  /* padding: 10px; */
-  /* margin: 0; */
-  /* font-size: 2em; */
-  /* border: 1px solid #444; */
-/* } */
 
 /* Styles for Print */
 @media print {
@@ -216,8 +205,9 @@ window.addEventListener('message', function(event) {
     if (sectionIndex < 0) sectionIndex = 0;
     if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
     sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
-  }
-}, false);
+  } else if (event.data.action === 'print') {
+    window.print();
+  }}, false);
 </script>
 </body>
 </html>

@@ -6,27 +6,14 @@ function previous() { if (index > 0) { index--; update(); } }
 function next() { if (index < urls.length - 1) { index++; update(); } }
 
 var iframe = document.getElementById('iframe');
-// iframe.onload = function() {
-  // // Reset section index when new content is loaded
-  // sectionIndex = 0;
-  // var sections = this.contentDocument.getElementsByTagName('section');
-// };
-
 function scrollSection(dir) {
   iframe.contentWindow.postMessage({ action: 'scrollSection', dir: dir }, '*');
 }
 
-// function scrollSection(dir) {
-  // var sections = iframe.contentDocument.getElementsByTagName('section');
-  // if (dir > 0) {
-    // console.log("up")
-    // if (sectionIndex < sections.length - 1) { sectionIndex++; }
-  // } else {
-    // console.log("down")
-    // if (sectionIndex > 0) { sectionIndex--; }
-  // }
-  // sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
-// }
+// document.getElementById('print-button').addEventListener('click', printIframe);
+function printIframe() {
+  iframe.contentWindow.postMessage({action: 'print'}, '*');
+}
 
 function update() {
   iframe.src = urls[index][0];
@@ -49,26 +36,31 @@ document.querySelectorAll("nav a").forEach(function(link, i) {
 });
 
 window.addEventListener('keydown', function(event) {
+   if (event.ctrlKey && event.keyCode === 80) {
+    // Prevent the default print dialog from showing
+    event.preventDefault();
+    // Call your custom print function
+    printIframe();
+  }
   switch (event.keyCode) {
-    case 37: // left arrow
+    case 104:  // h
+    case 37:   // left arrow
       previous();
       break;
-    case 39: // right arrow
+    case 108:  // l
+    case 39:   // right arrow
       next();
       break;
-    case 38: // up arrow
+    case 107:  // k
+    case 38:   // up arrow
       console.log("up")
       scrollSection(-1);
-      // iframe.onload = function() {
-        // scrollSection(-1);
-      // }
       break;
-    case 40: // down arrow
+    case 32:   //space
+    case 106:  // j
+    case 40:   // down arrow
       console.log("down")
       scrollSection(1);
-      // iframe.onload = function() {
-        // scrollSection(1);
-      // }
       break;
   }
 });

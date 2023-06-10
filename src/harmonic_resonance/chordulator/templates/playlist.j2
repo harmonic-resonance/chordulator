@@ -14,8 +14,9 @@
         <li><a href="{{ file }}" target="iframe">{{ title }}</a></li>
       {% endfor %}
     </ul>
-    <button onclick="previous()">Previous</button>
-    <button onclick="next()">Next</button>
+    <button onclick="previous()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+    <button onclick="printIframe()">print</button>
   </nav>
   <iframe id="iframe" name="iframe"></iframe>
   <script>

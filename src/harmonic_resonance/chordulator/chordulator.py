@@ -156,8 +156,9 @@ window.addEventListener('message', function(event) {
     if (sectionIndex < 0) sectionIndex = 0;
     if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
     sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
-  }
-}, false);
+  } else if (event.data.action === 'print') {
+    window.print();
+  }}, false);
 </script>
 </body>
 </html>

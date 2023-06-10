@@ -15,9 +15,15 @@ iframe {
   height: 100vh;
 }
 nav {
+  text-align: center;
   width: 25%;
   background: #111;
   color: #ddd;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 nav a {
   color: #ddd;
@@ -31,7 +37,7 @@ nav button {
   background: black;
   border: none;
   margin: 3px;
-  padding 12px;
+  padding: 2em;
   width: 40%;
 }
 nav button:hover {
