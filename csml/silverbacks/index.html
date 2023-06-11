@@ -143,21 +143,21 @@ window.addEventListener('keydown', function(event) {
     printIframe();
   }
   switch (event.keyCode) {
-    case 104:  // h
+    case 72:   // h
     case 37:   // left arrow
       previous();
       break;
-    case 108:  // l
+    case 76:   // l
     case 39:   // right arrow
       next();
       break;
-    case 107:  // k
+    case 75:   // k
     case 38:   // up arrow
       console.log("up")
       scrollSection(-1);
       break;
-    case 32:   //space
-    case 106:  // j
+    case 32:   // space
+    case 74:   // j
     case 40:   // down arrow
       console.log("down")
       scrollSection(1);
