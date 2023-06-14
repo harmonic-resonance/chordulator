@@ -127,6 +127,22 @@ def generate_web_page(chord_sheet):
 
     # header
     output += f"<header>\n<h1>{title}</h1>\n"
+    output += '<div class="details">\n'
+    header_fields = ["key", "capo", "capo-key"]
+    for field in header_fields:
+        if field in fields:
+            output += f"  <p>{field}: {fields[field]}\n"
+    output += "</div>\n"
+    output += "</header>\n"
+
+    # lines
+    output += generate_lines(lines)
+
+    chord_table = parse_csml_chord_table(chord_sheet)
+    print(chord_table)
+    output += generate_chord_table_html(chord_table)
+
+    output += f"<footer>"
     # Add fields (excluding title) as key-value list
     fields_list = [
         f"<li>{key}: {value}</li>" for key, value in fields.items() if key != "title"
@@ -136,14 +152,7 @@ def generate_web_page(chord_sheet):
         output += "\n".join(fields_list)
         output += "</ul>"
 
-    output += "</header>\n"
-
-    # lines
-    output += generate_lines(lines)
-
-    chord_table = parse_csml_chord_table(chord_sheet)
-    print(chord_table)
-    output += generate_chord_table_html(chord_table)
+    output += "</footer>\n"
 
     output += """
 <script>

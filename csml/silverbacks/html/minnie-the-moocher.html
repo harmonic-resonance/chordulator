@@ -15,6 +15,23 @@ body {
   color: black;
 }
 
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
 pre {
   font-family: 'Fira Mono', monospace;
 }
@@ -99,168 +116,146 @@ table, th, td{
 <body>
 <header>
 <h1>Minnie the Moocher</h1>
-<ul><li>performer: Cab Calloway</li></ul></header>
+<div class="details">
+</div>
+</header>
 
 <div class="lines">
 <section class="intro">
 <h2>Intro</h2>
 <p class="comment"> Strong blues feel, 95bpm</p>
 <div class="line">
-<pre class="chords"><span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |</pre>
+<pre class="chords"><span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span></pre>
 </div>
 <div class="line">
-<pre class="chords"><span class="chord">C7</span>       |<span class="chord">Em</span>/<span class="chord">B</span> <span class="chord">B7</span>/<span class="chord">F#</span> <span class="chord">Em</span> |<span class="chord">Em</span>       |<span class="chord">Em</span>       |<span class="chord">Em</span>       |<span class="chord">C7</span>   <span class="chord">B7</span>   |</pre>
+<pre class="chords"><span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>       |<span class="chord">B7</span> <span class="chord">Em</span></pre>
+</div>
+<div class="line">
+<pre class="chords"><span class="chord">Em</span>       |<span class="chord">C7</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">C7</span>   <span class="chord">B7</span></pre>
+<pre class="lyrics">                                   Hey folks,</pre>
 </section>
 <section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
-<pre class="lyrics"> Folks, here's the story 'bout Minnie the Moocher,</pre>
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
+<pre class="lyrics"> _ here's the story 'bout Minnie the Moocher,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">C7</span>                   <span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
 <pre class="lyrics"> She was a low-down hoochie-cootcher,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
-<pre class="lyrics"> She was the roughest, toughest frail,</pre>
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> She was the roughest, toughest frail,  but</pre>
 </div>
 <div class="line">
-<pre class="chords">     <span class="chord">C7</span>                    <span class="chord">B7</span>       <span class="chord">Em</span></pre>
-<pre class="lyrics"> But Minnie had a heart as big as a whale.</pre>
+<pre class="chords"> <span class="chord">C7</span>                   |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> Minnie had a heart as big as a whale.</pre>
 </section>
 <section class="chorus">
 <h2>Chorus</h2>
 <div class="line">
-<pre class="chords">       <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span></pre>
 <pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (Hi-de-hi-de-hi-di-hi!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho!)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</pre>
 </section>
 <section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
 <pre class="lyrics"> She messed around with a bloke named Smoky,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">C7</span>                     <span class="chord">B7</span>     <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                     |<span class="chord">B7</span>     <span class="chord">Em</span></pre>
 <pre class="lyrics"> She loved him though he was cokie,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
-<pre class="lyrics"> He took her down to Chinatown,</pre>
+<pre class="chords"> <span class="chord">Em</span>                 |<span class="chord">%</span></pre>
+<pre class="lyrics"> He took her down to Chinatown,     and he</pre>
 </div>
 <div class="line">
-<pre class="chords">        <span class="chord">C7</span>                         <span class="chord">B7</span>    <span class="chord">Em</span></pre>
-<pre class="lyrics"> And he showed her how to kick the gong around.</pre>
+<pre class="chords"> <span class="chord">C7</span>                        |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> showed her how to kick the gong around.</pre>
 </section>
 <section class="chorus">
 <h2>Chorus</h2>
 <div class="line">
-<pre class="chords">       <span class="chord">Em</span></pre>
-<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (Hi-de-hi-de-hi-di-hi!)</pre>
-</div>
-<div class="line">
-<pre class="chords">       Whoooooaaaaah!  (Whoooooaaaaah!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</pre>
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (repeat)</pre>
+<pre class="lyrics"> Whoooooaaaaah!        (repeat)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (repeat)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (repeat)</pre>
 </section>
 <section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span>                       |<span class="chord">%</span></pre>
 <pre class="lyrics"> She had a dream about the king of Sweden,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">C7</span>                        <span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
 <pre class="lyrics"> He gave her things that she was needin',</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span>                         |<span class="chord">%</span></pre>
 <pre class="lyrics"> He gave her a home built of gold and steel,</pre>
+<p class="comment"> Double time feel</p>
 </div>
 <div class="line">
-<pre class="lyrics">(Double time feel)</pre>
-</div>
-<div class="line">
-<pre class="chords">   <span class="chord">C7</span>                 <span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                  |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
 <pre class="lyrics"> A diamond car with a platinum wheel.</pre>
 </section>
 <section class="chorus">
 <h2>Chorus</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
-<pre class="lyrics"> Hi-de-hi-de-hi-de-hi-de-hi-de-hi-de-hi! (Hi-de-hi-de-hi-de-hi-de-hi-de-hi-de-hi!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Ho-de-ho-de-ho-de-ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho-de-ho-de-ho-de-hi!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   (Scat + Repeat)</pre>
-</div>
-<div class="line">
-<pre class="chords">   (<span class="chord">A</span> tempo)</pre>
-</div>
-<div class="line">
-<pre class="chords">   (Scat + Repeat)</pre>
+<pre class="chords"> <span class="chord">Em</span>                                     |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-hi-de-hi-de-hi-de-hi! (repeat)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho-de-ho-de-ho-de-ho! (repeat)</pre>
+<pre class="lyrics"> (Scat + Repeat)</pre>
+<p class="comment"> (A tempo)</p>
+<pre class="lyrics"> (Scat + Repeat)</pre>
 </section>
 <section class="verse 4">
 <h2>Verse 4</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
 <pre class="lyrics"> He gave her his townhouse and his racing horses,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">C7</span>                        <span class="chord">B7</span>    <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
 <pre class="lyrics"> Each meal she ate was a dozen courses;</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
 <pre class="lyrics"> She had a million dollars worth of nickels and dimes,</pre>
 </div>
 <div class="line">
-<pre class="chords">     <span class="chord">C7</span>                                <span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="chords"> <span class="chord">C7</span>                   |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
 <pre class="lyrics"> She sat around and counted them all a million times.</pre>
 </section>
 <section class="chorus">
 <h2>Chorus</h2>
 <div class="line">
-<pre class="chords">       <span class="chord">Em</span></pre>
-<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (Hi-de-hi-de-hi-di-hi!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</pre>
-</div>
-<div class="line">
-<pre class="chords">   Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</pre>
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (repeat)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho! (repeat)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (repeat)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (repeat)</pre>
 </section>
 <section class="outro">
 <h2>Outro</h2>
 <div class="line">
-<pre class="chords">   <span class="chord">Em</span>      <span class="chord">C7</span></pre>
+<pre class="chords"> <span class="chord">Em</span>      <span class="chord">C7</span></pre>
 <pre class="lyrics"> Poor    Min,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">C7</span>      <span class="chord">B7</span></pre>
+<pre class="chords"> <span class="chord">C7</span>      <span class="chord">B7</span></pre>
 <pre class="lyrics"> Poor    Min,</pre>
 </div>
 <div class="line">
-<pre class="chords">   <span class="chord">Em7</span>/<span class="chord">G</span>   <span class="chord">Em</span>   (Hold to end)</pre>
+<pre class="chords"> <span class="chord">Em7</span>/<span class="chord">G</span>   <span class="chord">Em</span></pre>
 <pre class="lyrics"> Poor    Min.</pre>
 </section>
 </div>
@@ -273,18 +268,18 @@ table, th, td{
         <td class="chord">Em</td>
         <td class="chord">Em B7</td>
         <td class="chord">Em</td>
-        <td class="chord">Em B7</td>
-        <td class="chord">Em</td>
-        <td class="chord"></td>
       </tr>
       <tr>
-        <td class="chord">C7</td>
-        <td class="chord">Em/B B7/F# Em</td>
+        <td class="chord">Em B7</td>
         <td class="chord">Em</td>
         <td class="chord">Em</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+      <tr>
         <td class="chord">Em</td>
         <td class="chord">C7 B7</td>
-        <td class="chord"></td>
+        <td class="chord">Em</td>
+        <td class="chord">C7 B7</td>
       </tr>
     </table>
   </section>
@@ -293,15 +288,19 @@ table, th, td{
     <table>
       <tr>
         <td class="chord">Em</td>
+        <td class="chord">%</td>
       </tr>
       <tr>
-        <td class="chord">C7 B7 Em</td>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
       </tr>
       <tr>
         <td class="chord">Em</td>
+        <td class="chord">%</td>
       </tr>
       <tr>
-        <td class="chord">C7 B7 Em</td>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
       </tr>
     </table>
   </section>
@@ -310,15 +309,7 @@ table, th, td{
     <table>
       <tr>
         <td class="chord">Em</td>
-      </tr>
-      <tr>
-        <td class="chord">Ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho!)</td>
-      </tr>
-      <tr>
-        <td class="chord">He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</td>
-      </tr>
-      <tr>
-        <td class="chord">Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</td>
+        <td class="chord">%</td>
       </tr>
     </table>
   </section>
@@ -327,15 +318,19 @@ table, th, td{
     <table>
       <tr>
         <td class="chord">Em</td>
+        <td class="chord">%</td>
       </tr>
       <tr>
-        <td class="chord">C7 B7 Em</td>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
       </tr>
       <tr>
         <td class="chord">Em</td>
+        <td class="chord">%</td>
       </tr>
       <tr>
-        <td class="chord">C7 B7 Em</td>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
       </tr>
     </table>
   </section>
@@ -349,11 +344,13 @@ table, th, td{
         <td class="chord">C7 B7</td>
       </tr>
       <tr>
-        <td class="chord">Em7/G Em (Hold to end)</td>
+        <td class="chord">Em7/G Em</td>
       </tr>
     </table>
   </section>
 </div>
+<footer><ul><li>performer: Cab Calloway</li>
+<li>ref: https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0036355</li></ul></footer>
 
 <script>
 var sectionIndex = 0;

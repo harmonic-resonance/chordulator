@@ -15,6 +15,23 @@ body {
   color: black;
 }
 
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
 pre {
   font-family: 'Fira Mono', monospace;
 }
@@ -99,8 +116,9 @@ table, th, td{
 <body>
 <header>
 <h1>Caldonia</h1>
-<ul><li>performer: Louis Jordan</li>
-<li>youtube: PR6pHtiNT_k</li></ul></header>
+<div class="details">
+</div>
+</header>
 
 <div class="lines">
 <section class="intro">
@@ -241,6 +259,8 @@ table, th, td{
     </table>
   </section>
 </div>
+<footer><ul><li>performer: Louis Jordan</li>
+<li>youtube: PR6pHtiNT_k</li></ul></footer>
 
 <script>
 var sectionIndex = 0;

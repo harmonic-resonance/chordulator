@@ -15,6 +15,23 @@ body {
   color: black;
 }
 
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
 pre {
   font-family: 'Fira Mono', monospace;
 }
@@ -99,8 +116,9 @@ table, th, td{
 <body>
 <header>
 <h1>Let the Good Times Roll</h1>
-<ul><li>performer: Ray Charles</li>
-<li>youtube: Lk4iOmb-osk</li></ul></header>
+<div class="details">
+</div>
+</header>
 
 <div class="lines">
 <section class="verse 1">
@@ -292,6 +310,8 @@ table, th, td{
     </table>
   </section>
 </div>
+<footer><ul><li>performer: Ray Charles</li>
+<li>youtube: Lk4iOmb-osk</li></ul></footer>
 
 <script>
 var sectionIndex = 0;

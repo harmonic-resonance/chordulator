@@ -15,6 +15,23 @@ body {
   color: black;
 }
 
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
 pre {
   font-family: 'Fira Mono', monospace;
 }
@@ -99,9 +116,11 @@ table, th, td{
 <body>
 <header>
 <h1>She Caught the Katy</h1>
-<ul><li>performer: Taj Mahal</li>
-<li>capo: 1</li>
-<li>key: Bb</li></ul></header>
+<div class="details">
+  <p>key: Bb
+  <p>capo: 1
+</div>
+</header>
 
 <div class="lines">
 <section class="verse">
@@ -243,6 +262,9 @@ table, th, td{
     </table>
   </section>
 </div>
+<footer><ul><li>performer: Taj Mahal</li>
+<li>capo: 1</li>
+<li>key: Bb</li></ul></footer>
 
 <script>
 var sectionIndex = 0;

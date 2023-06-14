@@ -1,12 +1,14 @@
 html/train-whistle-blues.html
 html/flip-flop-and-fly.html
+html/all-of-me.html
 html/when-youre-smiling.html
 html/i-wanna-be-like-you.html
 html/she-caught-the-katy.html
+html/lazy-river.html
 html/minnie-the-moocher.html
 html/let-the-good-times-roll.html
-html/lazy-river.html
 html/every-day-i-have-the-blues.html
+html/early-in-the-morning.html
 html/caldonia.html
 html/kansas-city.html
 html/jump-jive-and-wail.html

@@ -15,6 +15,23 @@ body {
   color: black;
 }
 
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
 pre {
   font-family: 'Fira Mono', monospace;
 }
@@ -99,8 +116,9 @@ table, th, td{
 <body>
 <header>
 <h1>Lazy River</h1>
-<ul><li>composer: Hoagy Carmichael</li>
-<li>youtube: Snv8K4CeSPA</li></ul></header>
+<div class="details">
+</div>
+</header>
 
 <div class="lines">
 <section class="intro">
@@ -111,29 +129,29 @@ table, th, td{
 <section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords"> <span class="chord">E</span>          |            |<span class="chord">E7</span>      |</pre>
+<pre class="chords"> <span class="chord">E</span>          |<span class="chord">%</span>           |<span class="chord">E7</span>      |<span class="chord">%</span></pre>
 <pre class="lyrics"> Up the lazy river by the old mill run</pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">A</span>            |              |<span class="chord">A7</span>      |</pre>
+<pre class="chords"> <span class="chord">A</span>            |<span class="chord">%</span>             |<span class="chord">A7</span>      |<span class="chord">%</span></pre>
 <pre class="lyrics"> Meet the lazy river with the noon-day sun</pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">D</span>            |          |<span class="chord">D7</span>      |</pre>
+<pre class="chords"> <span class="chord">D</span>            |<span class="chord">%</span>         |<span class="chord">D7</span>      |<span class="chord">%</span></pre>
 <pre class="lyrics"> Linger in the shade of a kind old tree</pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">G</span>              |<span class="chord">G</span>                |<span class="chord">G7</span>        |</pre>
+<pre class="chords"> <span class="chord">G</span>              |<span class="chord">G</span>                |<span class="chord">G7</span>        |<span class="chord">%</span></pre>
 <pre class="lyrics"> Throw away your troubles, dream a dream with me</pre>
 </section>
 <section class="verse">
 <h2>Verse</h2>
 <div class="line">
-<pre class="chords"> <span class="chord">E</span>          |               |<span class="chord">E7</span>     |</pre>
+<pre class="chords"> <span class="chord">E</span>          |<span class="chord">%</span>              |<span class="chord">E7</span>     |<span class="chord">%</span></pre>
 <pre class="lyrics"> Up the lazy river where the robin's song</pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">A</span>                  |             |<span class="chord">A7</span>     |</pre>
+<pre class="chords"> <span class="chord">A</span>                  |<span class="chord">%</span>            |<span class="chord">A7</span>     |<span class="chord">%</span></pre>
 <pre class="lyrics"> Wakes to bright new mornin' as we loaf a- long</pre>
 </div>
 <div class="line">
@@ -145,7 +163,7 @@ table, th, td{
 <pre class="lyrics"> Up the lazy river, how happy we would be</pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">A</span>          |<span class="chord">D</span>         |<span class="chord">G</span>       |</pre>
+<pre class="chords"> <span class="chord">A</span>          |<span class="chord">D</span>         |<span class="chord">G</span>       |<span class="chord">%</span></pre>
 <pre class="lyrics"> Up the lazy river with me</pre>
 </section>
 </div>
@@ -164,15 +182,15 @@ table, th, td{
     <table>
       <tr>
         <td class="chord">E</td>
-        <td class="chord"></td>
+        <td class="chord">%</td>
         <td class="chord">E7</td>
-        <td class="chord"></td>
+        <td class="chord">%</td>
       </tr>
       <tr>
         <td class="chord">A</td>
-        <td class="chord"></td>
+        <td class="chord">%</td>
         <td class="chord">A7</td>
-        <td class="chord"></td>
+        <td class="chord">%</td>
       </tr>
       <tr>
         <td class="chord">C</td>
@@ -190,11 +208,13 @@ table, th, td{
         <td class="chord">A</td>
         <td class="chord">D</td>
         <td class="chord">G</td>
-        <td class="chord"></td>
+        <td class="chord">%</td>
       </tr>
     </table>
   </section>
 </div>
+<footer><ul><li>composer: Hoagy Carmichael</li>
+<li>youtube: Snv8K4CeSPA</li></ul></footer>
 
 <script>
 var sectionIndex = 0;

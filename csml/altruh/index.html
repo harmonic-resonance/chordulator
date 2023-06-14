@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PLAYLISTER</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap'); */
+
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+  display: flex;
+}
+iframe {
+  border: none;
+  background: #000;
+  width: 75%;
+  height: 100vh;
+}
+nav {
+  text-align: center;
+  width: 25%;
+  background: #111;
+  color: #ddd;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #ddd;
+  text-decoration: none;
+}
+nav a.selected {
+  color: #F90;
+}
+nav button {
+  color: white;
+  background: black;
+  border: none;
+  margin: 3px;
+  padding: 2em;
+  width: 40%;
+}
+nav button:hover {
+  background: #444;
+}
+  </style>
+</head>
+<body onload="update()">
+  <nav>
+    <h1>PLAYLISTER</h1>
+    <ul>
+      
+        <li><a href="html/aint-no-mountain-high-enough.html" target="iframe">Ain’t No Mountain High Enough</a></li>
+      
+        <li><a href="html/quando.html" target="iframe">Quando, Quando, Quando</a></li>
+      
+        <li><a href="html/overwhelmed.html" target="iframe">Overwhelmed</a></li>
+      
+        <li><a href="html/good-good-father.html" target="iframe">Good, Good Father</a></li>
+      
+        <li><a href="html/wonderin.html" target="iframe">Wonderin’</a></li>
+      
+        <li><a href="html/to-make-you-feel-my-love.html" target="iframe">To Make You Feel My Love</a></li>
+      
+        <li><a href="html/the-wedding-song.html" target="iframe">The Wedding Song</a></li>
+      
+        <li><a href="html/little-ole-boy.html" target="iframe">Little Ole Boy, Little Ole Girl</a></li>
+      
+        <li><a href="html/from-this-moment.html" target="iframe">From This Moment</a></li>
+      
+        <li><a href="html/for-a-thousand-years.html" target="iframe">For A Thousand Years</a></li>
+      
+        <li><a href="html/in-the-waiting-line.html" target="iframe">In The Waiting Line</a></li>
+      
+        <li><a href="html/destiny.html" target="iframe">Destiny</a></li>
+      
+    </ul>
+    <button onclick="previous()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+    <button onclick="printIframe()">print</button>
+  </nav>
+  <iframe id="iframe" name="iframe"></iframe>
+  <script>
+    var urls = [["html/aint-no-mountain-high-enough.html", "Ain\u2019t No Mountain High Enough"], ["html/quando.html", "Quando, Quando, Quando"], ["html/overwhelmed.html", "Overwhelmed"], ["html/good-good-father.html", "Good, Good Father"], ["html/wonderin.html", "Wonderin\u2019"], ["html/to-make-you-feel-my-love.html", "To Make You Feel My Love"], ["html/the-wedding-song.html", "The Wedding Song"], ["html/little-ole-boy.html", "Little Ole Boy, Little Ole Girl"], ["html/from-this-moment.html", "From This Moment"], ["html/for-a-thousand-years.html", "For A Thousand Years"], ["html/in-the-waiting-line.html", "In The Waiting Line"], ["html/destiny.html", "Destiny"]];
+var index = 0;
+var sectionIndex = 0;
+
+function previous() { if (index > 0) { index--; update(); } }
+function next() { if (index < urls.length - 1) { index++; update(); } }
+
+var iframe = document.getElementById('iframe');
+function scrollSection(dir) {
+  iframe.contentWindow.postMessage({ action: 'scrollSection', dir: dir }, '*');
+}
+
+// document.getElementById('print-button').addEventListener('click', printIframe);
+function printIframe() {
+  iframe.contentWindow.postMessage({action: 'print'}, '*');
+}
+
+function update() {
+  iframe.src = urls[index][0];
+  var links = document.querySelectorAll("nav a");
+  links.forEach(function(link, i) {
+    if (i === index) {
+      link.classList.add("selected");
+    } else {
+      link.classList.remove("selected");
+    }
+  });
+}
+
+document.querySelectorAll("nav a").forEach(function(link, i) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    index = i;
+    update();
+  });
+});
+
+window.addEventListener('keydown', function(event) {
+   if (event.ctrlKey && event.keyCode === 80) {
+    // Prevent the default print dialog from showing
+    event.preventDefault();
+    // Call your custom print function
+    printIframe();
+  }
+  switch (event.keyCode) {
+    case 72:   // h
+    case 37:   // left arrow
+      previous();
+      break;
+    case 76:   // l
+    case 39:   // right arrow
+      next();
+      break;
+    case 75:   // k
+    case 38:   // up arrow
+      console.log("up")
+      scrollSection(-1);
+      break;
+    case 32:   // space
+    case 74:   // j
+    case 40:   // down arrow
+      console.log("down")
+      scrollSection(1);
+      break;
+  }
+});
+
+update();
+  </script>
+</body>
+</html>
