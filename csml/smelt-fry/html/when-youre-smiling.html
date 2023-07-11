@@ -1,0 +1,256 @@
+<html>
+<head>
+<title>When You're Smiling</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.print body {
+  background-color: white;
+  color: black;
+}
+
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
+pre {
+  font-family: 'Fira Mono', monospace;
+}
+
+.line {
+  page-break-inside: avoid;
+  margin-top: 0.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.chords, .lyrics {
+  margin: 0;
+}
+
+.chords {
+  /* color: #F09; */
+  color: #C09;
+  font-weight: bold;
+}
+
+.chord {
+  color: #F90;
+  font-weight: bold;
+}
+
+section {
+  page-break-inside: avoid;
+  border-top: 2px #444 solid;
+  margin-top: 2em;
+}
+
+.chord-table {
+  /* font-family: 'Fira Sans', sans-serif; */
+  margin-top: .5em;
+}
+.chord-section {
+  margin-top: 2em;
+}
+
+
+/* Styles for Print */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .print body {
+    background-color: black;
+    color: white;
+  }
+}
+
+.chord-table-section td {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 2em;
+  padding: .25em;
+  min-width: 100px;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table, th, td{
+  border: 1px solid #444;
+  border-collapse: collapse;
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>When You're Smiling</h1>
+<div class="details">
+</div>
+</header>
+
+<div class="lines">
+<section class="intro">
+<h2>Intro</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Am</span>         |<span class="chord">D7</span>         |<span class="chord">G</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics">                                        When you're</pre>
+</section>
+<section class="verse a">
+<h2>Verse A</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">G</span>      |<span class="chord">%</span>            |<span class="chord">Gmaj7</span>      |<span class="chord">%</span></pre>
+<pre class="lyrics"> smi- ling when you're smi- ling.       The</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">E7</span>         |<span class="chord">%</span>          |<span class="chord">Am</span>       |<span class="chord">%</span></pre>
+<pre class="lyrics"> whole world smiles with you.           When you're</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Am</span>      |<span class="chord">%</span>             |<span class="chord">Am7</span>      |<span class="chord">%</span></pre>
+<pre class="lyrics"> laughing oh when you're laughing.      The</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">D7</span>       |<span class="chord">%</span>        |<span class="chord">G</span>            |<span class="chord">%</span></pre>
+<pre class="lyrics"> sun comes shin- ing through.           But when you're</pre>
+</section>
+<section class="verse b">
+<h2>Verse B</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">G7</span>        |<span class="chord">C</span>           |<span class="chord">%</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics"> crying you bring on the rain.          So stop your</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">A7</span>         |<span class="chord">D7</span>         |<span class="chord">%</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics"> sighing and be happy a- gain.          Just keep on</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">G</span>      |<span class="chord">%</span>                  |<span class="chord">E7</span>       |<span class="chord">%</span></pre>
+<pre class="lyrics"> smi- ling cause when you're smiling.   The</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Am</span>         |<span class="chord">D7</span>         |<span class="chord">G</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics"> whole world smiles with you.</pre>
+</section>
+</div>
+<div class="chord-tables">
+  <section class="chord-table-section">
+    <h2>Intro</h2>
+    <table>
+      <tr>
+        <td class="chord">Am</td>
+        <td class="chord">D7</td>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Verse A</h2>
+    <table>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+        <td class="chord">Gmaj7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">E7</td>
+        <td class="chord">%</td>
+        <td class="chord">Am</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">Am</td>
+        <td class="chord">%</td>
+        <td class="chord">Am7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">D7</td>
+        <td class="chord">%</td>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Verse B</h2>
+    <table>
+      <tr>
+        <td class="chord">G7</td>
+        <td class="chord">C</td>
+        <td class="chord">%</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">A7</td>
+        <td class="chord">D7</td>
+        <td class="chord">%</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+        <td class="chord">E7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">Am</td>
+        <td class="chord">D7</td>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+      </tr>
+    </table>
+  </section>
+</div>
+<footer><ul><li>composer: Joe Goodwin, Larry Shay, Mark Fisher</li>
+<li>youtube: YXYRkp2HZto</li></ul></footer>
+
+<script>
+var sectionIndex = 0;
+var sections = document.getElementsByTagName('section');
+
+window.addEventListener('message', function(event) {
+  if (event.data.action === 'scrollSection') {
+    sectionIndex += event.data.dir;
+    if (sectionIndex < 0) sectionIndex = 0;
+    if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
+    sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  } else if (event.data.action === 'print') {
+    window.print();
+  }}, false);
+</script>
+</body>
+</html>

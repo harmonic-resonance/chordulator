@@ -1,0 +1,247 @@
+<html>
+<head>
+<title>All Of Me</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.print body {
+  background-color: white;
+  color: black;
+}
+
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
+pre {
+  font-family: 'Fira Mono', monospace;
+}
+
+.line {
+  page-break-inside: avoid;
+  margin-top: 0.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.chords, .lyrics {
+  margin: 0;
+}
+
+.chords {
+  /* color: #F09; */
+  color: #C09;
+  font-weight: bold;
+}
+
+.chord {
+  color: #F90;
+  font-weight: bold;
+}
+
+section {
+  page-break-inside: avoid;
+  border-top: 2px #444 solid;
+  margin-top: 2em;
+}
+
+.chord-table {
+  /* font-family: 'Fira Sans', sans-serif; */
+  margin-top: .5em;
+}
+.chord-section {
+  margin-top: 2em;
+}
+
+
+/* Styles for Print */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .print body {
+    background-color: black;
+    color: white;
+  }
+}
+
+.chord-table-section td {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 2em;
+  padding: .25em;
+  min-width: 100px;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table, th, td{
+  border: 1px solid #444;
+  border-collapse: collapse;
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>All Of Me</h1>
+<div class="details">
+</div>
+</header>
+
+<div class="lines">
+<section class="verse">
+<h2>Verse</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">G</span>         |<span class="chord">%</span>              |<span class="chord">B7</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics"> All of me___, why not take all of me___.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">E7</span>            |<span class="chord">%</span>                   |<span class="chord">Am7</span>      |<span class="chord">%</span></pre>
+<pre class="lyrics"> Can't you see___, I'm no good with - out you___.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">B7</span>          |<span class="chord">%</span>           |<span class="chord">Em</span>        |<span class="chord">%</span></pre>
+<pre class="lyrics"> Take my arm___, I want to lose them___.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">A</span>            |<span class="chord">%</span>             |<span class="chord">D</span>  |<span class="chord">D7</span></pre>
+<pre class="lyrics"> Take my lips___,  I'll never use them.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">G</span>             |<span class="chord">%</span>              |<span class="chord">B7</span>            |<span class="chord">%</span></pre>
+<pre class="lyrics"> Your good bye___, left me with eyes that cry___.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">E7</span>        |<span class="chord">%</span>                  |<span class="chord">Am7</span>     |<span class="chord">%</span></pre>
+<pre class="lyrics"> How can I___, go on dear with- out you___.</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C</span>           |<span class="chord">Cm7</span>      |<span class="chord">Gmaj7</span>      |<span class="chord">E7</span></pre>
+<pre class="lyrics"> You took the part that once was my heart.  So</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Am7</span>         |<span class="chord">D7</span>    |<span class="chord">G</span>   |<span class="chord">D7</span></pre>
+<pre class="lyrics"> why not take all of me_____.</pre>
+</section>
+<section class="break">
+<h2>Break</h2>
+</section>
+<section class="% verse">
+<h2>% Verse</h2>
+</section>
+</div>
+<div class="chord-tables">
+  <section class="chord-table-section">
+    <h2>Verse</h2>
+    <table>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+        <td class="chord">B7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">E7</td>
+        <td class="chord">%</td>
+        <td class="chord">Am7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">B7</td>
+        <td class="chord">%</td>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">A</td>
+        <td class="chord">%</td>
+        <td class="chord">D</td>
+        <td class="chord">D7</td>
+      </tr>
+      <tr>
+        <td class="chord">G</td>
+        <td class="chord">%</td>
+        <td class="chord">B7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">E7</td>
+        <td class="chord">%</td>
+        <td class="chord">Am7</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">C</td>
+        <td class="chord">Cm7</td>
+        <td class="chord">Gmaj7</td>
+        <td class="chord">E7</td>
+      </tr>
+      <tr>
+        <td class="chord">Am7</td>
+        <td class="chord">D7</td>
+        <td class="chord">G</td>
+        <td class="chord">D7</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Break</h2>
+    <table>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>% Verse</h2>
+    <table>
+    </table>
+  </section>
+</div>
+<footer><ul><li>sheet: https://www.njpac.org/wp-content/uploads/2019/08/All-of-Me-.pdf</li></ul></footer>
+
+<script>
+var sectionIndex = 0;
+var sections = document.getElementsByTagName('section');
+
+window.addEventListener('message', function(event) {
+  if (event.data.action === 'scrollSection') {
+    sectionIndex += event.data.dir;
+    if (sectionIndex < 0) sectionIndex = 0;
+    if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
+    sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  } else if (event.data.action === 'print') {
+    window.print();
+  }}, false);
+</script>
+</body>
+</html>

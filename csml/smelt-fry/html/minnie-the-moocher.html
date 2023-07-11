@@ -1,0 +1,370 @@
+<html>
+<head>
+<title>Minnie the Moocher</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.print body {
+  background-color: white;
+  color: black;
+}
+
+header {
+  display: flex;
+}
+
+header > h1 {
+  width: 75%;
+}
+
+header > div {
+  width: 25%;
+  /* text-align: right; */
+  padding-left: 3em;
+}
+
+header > div > p {
+  margin: 0;
+}
+pre {
+  font-family: 'Fira Mono', monospace;
+}
+
+.line {
+  page-break-inside: avoid;
+  margin-top: 0.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.chords, .lyrics {
+  margin: 0;
+}
+
+.chords {
+  /* color: #F09; */
+  color: #C09;
+  font-weight: bold;
+}
+
+.chord {
+  color: #F90;
+  font-weight: bold;
+}
+
+section {
+  page-break-inside: avoid;
+  border-top: 2px #444 solid;
+  margin-top: 2em;
+}
+
+.chord-table {
+  /* font-family: 'Fira Sans', sans-serif; */
+  margin-top: .5em;
+}
+.chord-section {
+  margin-top: 2em;
+}
+
+
+/* Styles for Print */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .print body {
+    background-color: black;
+    color: white;
+  }
+}
+
+.chord-table-section td {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 2em;
+  padding: .25em;
+  min-width: 100px;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table, th, td{
+  border: 1px solid #444;
+  border-collapse: collapse;
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>Minnie the Moocher</h1>
+<div class="details">
+</div>
+</header>
+
+<div class="lines">
+<section class="intro">
+<h2>Intro</h2>
+<p class="comment"> Strong blues feel, 95bpm</p>
+<div class="line">
+<pre class="chords"><span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span></pre>
+</div>
+<div class="line">
+<pre class="chords"><span class="chord">Em</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">Em</span>       |<span class="chord">B7</span> <span class="chord">Em</span></pre>
+</div>
+<div class="line">
+<pre class="chords"><span class="chord">Em</span>       |<span class="chord">C7</span>   <span class="chord">B7</span>  |<span class="chord">Em</span>       |<span class="chord">C7</span>   <span class="chord">B7</span></pre>
+<pre class="lyrics">                                   Hey folks,</pre>
+</section>
+<section class="verse">
+<h2>Verse</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
+<pre class="lyrics"> _ here's the story 'bout Minnie the Moocher,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="lyrics"> She was a low-down hoochie-cootcher,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> She was the roughest, toughest frail,  but</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                   |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> Minnie had a heart as big as a whale.</pre>
+</section>
+<section class="chorus">
+<h2>Chorus</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (Hi-de-hi-de-hi-di-hi!)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho! (Ho-de-ho-de-ho-de-ho!)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (He-de-he-de-he-de-he!)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (Hi-de-hi-de-hi-de-ho!)</pre>
+</section>
+<section class="verse">
+<h2>Verse</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
+<pre class="lyrics"> She messed around with a bloke named Smoky,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                     |<span class="chord">B7</span>     <span class="chord">Em</span></pre>
+<pre class="lyrics"> She loved him though he was cokie,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                 |<span class="chord">%</span></pre>
+<pre class="lyrics"> He took her down to Chinatown,     and he</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                        |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> showed her how to kick the gong around.</pre>
+</section>
+<section class="chorus">
+<h2>Chorus</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (repeat)</pre>
+<pre class="lyrics"> Whoooooaaaaah!        (repeat)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (repeat)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (repeat)</pre>
+</section>
+<section class="verse">
+<h2>Verse</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                       |<span class="chord">%</span></pre>
+<pre class="lyrics"> She had a dream about the king of Sweden,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="lyrics"> He gave her things that she was needin',</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                         |<span class="chord">%</span></pre>
+<pre class="lyrics"> He gave her a home built of gold and steel,</pre>
+<p class="comment"> Double time feel</p>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                  |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> A diamond car with a platinum wheel.</pre>
+</section>
+<section class="chorus">
+<h2>Chorus</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                                     |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-hi-de-hi-de-hi-de-hi! (repeat)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho-de-ho-de-ho-de-ho! (repeat)</pre>
+<pre class="lyrics"> (Scat + Repeat)</pre>
+<p class="comment"> (A tempo)</p>
+<pre class="lyrics"> (Scat + Repeat)</pre>
+</section>
+<section class="verse 4">
+<h2>Verse 4</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                      |<span class="chord">%</span></pre>
+<pre class="lyrics"> He gave her his townhouse and his racing horses,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                |<span class="chord">B7</span>      <span class="chord">Em</span></pre>
+<pre class="lyrics"> Each meal she ate was a dozen courses;</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> She had a million dollars worth of nickels and dimes,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>                   |<span class="chord">B7</span>       <span class="chord">Em</span></pre>
+<pre class="lyrics"> She sat around and counted them all a million times.</pre>
+</section>
+<section class="chorus">
+<h2>Chorus</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>                   |<span class="chord">%</span></pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-di-hi! (repeat)</pre>
+<pre class="lyrics"> Ho-de-ho-de-ho-de-ho! (repeat)</pre>
+<pre class="lyrics"> He-de-he-de-he-de-he! (repeat)</pre>
+<pre class="lyrics"> Hi-de-hi-de-hi-de-ho! (repeat)</pre>
+</section>
+<section class="outro">
+<h2>Outro</h2>
+<div class="line">
+<pre class="chords"> <span class="chord">Em</span>      <span class="chord">C7</span></pre>
+<pre class="lyrics"> Poor    Min,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">C7</span>      <span class="chord">B7</span></pre>
+<pre class="lyrics"> Poor    Min,</pre>
+</div>
+<div class="line">
+<pre class="chords"> <span class="chord">Em7</span>/<span class="chord">G</span>   <span class="chord">Em</span></pre>
+<pre class="lyrics"> Poor    Min.</pre>
+</section>
+</div>
+<div class="chord-tables">
+  <section class="chord-table-section">
+    <h2>Intro</h2>
+    <table>
+      <tr>
+        <td class="chord">Em B7</td>
+        <td class="chord">Em</td>
+        <td class="chord">Em B7</td>
+        <td class="chord">Em</td>
+      </tr>
+      <tr>
+        <td class="chord">Em B7</td>
+        <td class="chord">Em</td>
+        <td class="chord">Em</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">C7 B7</td>
+        <td class="chord">Em</td>
+        <td class="chord">C7 B7</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Verse</h2>
+    <table>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Chorus</h2>
+    <table>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Verse 4</h2>
+    <table>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+      <tr>
+        <td class="chord">Em</td>
+        <td class="chord">%</td>
+      </tr>
+      <tr>
+        <td class="chord">C7</td>
+        <td class="chord">B7 Em</td>
+      </tr>
+    </table>
+  </section>
+  <section class="chord-table-section">
+    <h2>Outro</h2>
+    <table>
+      <tr>
+        <td class="chord">Em C7</td>
+      </tr>
+      <tr>
+        <td class="chord">C7 B7</td>
+      </tr>
+      <tr>
+        <td class="chord">Em7/G Em</td>
+      </tr>
+    </table>
+  </section>
+</div>
+<footer><ul><li>performer: Cab Calloway</li>
+<li>ref: https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0036355</li></ul></footer>
+
+<script>
+var sectionIndex = 0;
+var sections = document.getElementsByTagName('section');
+
+window.addEventListener('message', function(event) {
+  if (event.data.action === 'scrollSection') {
+    sectionIndex += event.data.dir;
+    if (sectionIndex < 0) sectionIndex = 0;
+    if (sectionIndex > sections.length - 1) sectionIndex = sections.length - 1;
+    sections[sectionIndex].scrollIntoView({behavior: "smooth", block: "center"});
+  } else if (event.data.action === 'print') {
+    window.print();
+  }}, false);
+</script>
+</body>
+</html>
