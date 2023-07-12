@@ -10,10 +10,6 @@ body {
   color: white;
 }
 
-.print body {
-  background-color: white;
-  color: black;
-}
 
 header {
   display: flex;
@@ -81,19 +77,6 @@ section {
 }
 
 
-/* Styles for Print */
-@media print {
-  body {
-    background-color: white;
-    color: black;
-  }
-
-  .print body {
-    background-color: black;
-    color: white;
-  }
-}
-
 .chord-table-section td {
   font-family: "Fira Mono", monospace;
   text-align: center;
@@ -110,6 +93,29 @@ table, th, td{
   border: 1px solid #444;
   border-collapse: collapse;
 }
+
+@page { 
+  size:8.5in 11in; 
+  margin: .25in;
+}
+
+/* Styles for Print */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+    font-size: 12pt;
+  }
+  .chords {
+    color: #C39;
+  }
+
+  .chord {
+    color: #F93;
+  }
+
+}
+
 
 </style>
 </head>
