@@ -17,6 +17,7 @@ header {
 
 header > h1 {
   width: 75%;
+  margin-top: 0;
 }
 
 header > div {
@@ -68,6 +69,10 @@ section {
   margin-top: 2em;
 }
 
+.chord-tables {
+  page-break-before: always;
+}
+
 .chord-table {
   /* font-family: 'Fira Sans', sans-serif; */
   margin-top: .5em;
@@ -80,8 +85,8 @@ section {
 .chord-table-section td {
   font-family: "Fira Mono", monospace;
   text-align: center;
-  font-size: 2em;
-  padding: .25em;
+  font-size: 1.3em;
+  padding: .2em;
   min-width: 100px;
 }
 
@@ -194,22 +199,13 @@ table, th, td{
 <section class="break">
 <h2>Break</h2>
 <div class="line">
-<pre class="chords"> <span class="chord">E</span>      |<span class="chord">%</span></pre>
+<pre class="chords"> <span class="chord">E</span>      |<span class="chord">%</span>    | <span class="chord">E</span>      |<span class="chord">E</span>    <span class="chord">E7</span></pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">E</span>      |<span class="chord">E</span>    <span class="chord">E7</span></pre>
+<pre class="chords"> <span class="chord">A</span>      |<span class="chord">%</span>    | <span class="chord">E</span>      |<span class="chord">%</span></pre>
 </div>
 <div class="line">
-<pre class="chords"> <span class="chord">A</span>      |<span class="chord">%</span></pre>
-</div>
-<div class="line">
-<pre class="chords"> <span class="chord">E</span>      |<span class="chord">%</span></pre>
-</div>
-<div class="line">
-<pre class="chords"> <span class="chord">B7</span>     |<span class="chord">%</span></pre>
-</div>
-<div class="line">
-<pre class="chords"> <span class="chord">A</span>      |<span class="chord">E</span></pre>
+<pre class="chords"> <span class="chord">B7</span>     |<span class="chord">%</span>    | <span class="chord">A</span>      |<span class="chord">E</span></pre>
 </section>
 <section class="verse">
 <h2>Verse</h2>
@@ -305,24 +301,18 @@ table, th, td{
       <tr>
         <td class="chord">E</td>
         <td class="chord">%</td>
-      </tr>
-      <tr>
         <td class="chord">E</td>
         <td class="chord">E E7</td>
       </tr>
       <tr>
         <td class="chord">A</td>
         <td class="chord">%</td>
-      </tr>
-      <tr>
         <td class="chord">E</td>
         <td class="chord">%</td>
       </tr>
       <tr>
         <td class="chord">B7</td>
         <td class="chord">%</td>
-      </tr>
-      <tr>
         <td class="chord">A</td>
         <td class="chord">E</td>
       </tr>
