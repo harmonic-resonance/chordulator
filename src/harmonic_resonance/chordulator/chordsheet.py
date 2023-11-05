@@ -1,5 +1,8 @@
 import re
 from rich import print, inspect
+import phimidi as pm
+import itertools as itertools
+import random as random
 
 CHORDS = {
     "M": [0, 4, 7],
@@ -26,6 +29,7 @@ class ChordSheet:
         self.performer = ""
         self.bpm = 120
         self.bpM = 4
+        self.root = "C4"
         self.key = "C"
         self.sections = {}  # Each section contains a list of line groups
 
@@ -137,6 +141,108 @@ class ChordSheet:
             lyrics.append(lyric_line[current_pos:])
 
         return lyrics
+
+    def create_part(self):
+
+        PROJECT = 'chordsheet_test'
+        title = self.title
+        bpm = int(self.bpm) # beats per minute
+        bpM = int(self.bpM)  # beats per Measure
+        root = pm.N.NOTES_BY_NAME[self.root]  # the root note of the key
+        key = self.key
+
+        part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
+        M = bpM * part.ticks_per_beat  # ticks per Measure
+
+        chords = pm.progressions.ii_V_i_i(root)
+        chords = pm.progressions.i_vi_ii_V(root)
+
+        piano = part.add_piano()
+        vibes = part.add_vibes()
+        bass = part.add_bass()
+        strings = part.add_strings()
+
+        choir = part.add_choir_swell()
+
+        conga = pm.Conga(part)
+        standard = pm.Standard(part)
+
+        for section in self.sections:
+            part.set_marker(f'{section=}', 0)
+            for chord_num, (chord_name, chord) in enumerate(chords):
+                chord2 = [note + 12 for note in chord]
+                chord3 = [note + 12 for note in chord2]
+                chord4 = [note + 12 for note in chord3]
+
+                part.set_marker(f'{chord_name} - {chord}', 0)
+
+                if chord_num in [0, 2]:
+                    rhythm = pm.patterns.latin.bossa_nova
+                if chord_num in [1, 3]:
+                    rhythm = pm.patterns.latin.rhumba
+
+                rhythm = pm.patterns.funky.billie_jean
+
+                measures = 4
+                for m in range(measures):
+                    part.set_marker(f'{m + 1}', M)
+                    #  if m == 0:
+                        #  velocity_mod = 10 
+                        #  #  conga.samba(2 * M, velocity_mod=-10)
+                        #  standard.billie_jean(2 * M, velocity_mod=-10)
+                    #  elif m == 2:
+                        #  standard.billie_jean(2 * M, velocity_mod=-10)
+                    #  else:
+                        #  pass
+                    standard.funky_drummer(M, velocity_mod=-10)
+
+                    if chord_num == 3:
+                        if m == measures - 1:
+                            # last
+                            bass.set_note(chord[1] - 12, M, velocity=90)
+                        else:
+                            bass.set_note(chord[2] - 12, M, velocity=70)
+                    else:
+                        if m == measures - 1:
+                            # last
+                            bass.set_note(chord[1] - 12, M, velocity=90)
+                        else:
+                            bass.set_note(chord[0] - 12, M, velocity=70)
+
+                    if loop > 0:
+                        if chord_num == 3:
+                            # last
+                            piano.set_notes(chord2, M, velocity=60)
+                        else:
+                            piano.set_notes(chord, M, velocity=60)
+                    else:
+                        piano.set_rest(M)
+
+
+
+                if loop > 2:
+                    strings.set_rest(3 * M)
+                    strings.set_notes(chord2, M/2, velocity=20)
+                    strings.set_notes(chord3, M/2, velocity=30)
+                else:
+                    strings.set_rest(4 * M)
+
+                if loop > 1:
+                    #  choir.set_rest(M)
+                    #  choir.set_notes(chord, (measures - 1) * M, offset=M/8)
+                    if chord_num == 3:
+                        choir.set_rest(4 * M)
+                        choir.set_volume(32, 4 * M)
+                    else:
+                        choir.set_notes(chord, measures  * M, offset=M/4)
+                        choir.set_volume(32, 0)
+                        choir.ramp_volume_up(2 * M)
+                        choir.ramp_volume_down(2 * M)
+                else:
+                    choir.set_rest(4 * M)
+                    choir.set_volume(32, 4 * M)
+
+
 
 
 # A function that reads CSML from a file and returns a populated ChordSheet object
