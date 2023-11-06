@@ -4,25 +4,6 @@ import phimidi as pm
 import itertools as itertools
 import random as random
 
-CHORDS = {
-    "M": [0, 4, 7],
-    "6": [0, 4, 7, 9],
-    "M7": [0, 4, 7, 11],
-    "7": [0, 4, 7, 10],
-    "9": [0, 4, 7, 10, 14],
-    "11": [0, 4, 7, 10, 14, 17],
-    "13": [0, 4, 7, 10, 14, 17, 21],
-    "m": [0, 3, 7],
-    "m7": [0, 3, 7, 10],
-    "m9": [0, 3, 7, 10, 14],
-    "m11": [0, 3, 7, 10, 14, 17],
-    "m13": [0, 3, 7, 10, 14, 17, 21],
-    "o": [0, 3, 6],
-    "sus2": [0, 2, 7],
-    "sus4": [0, 5, 7],
-}
-
-
 class ChordSheet:
     def __init__(self):
         self.title = ""
@@ -106,7 +87,7 @@ class ChordSheet:
             type_string = match.group(2)  # Remaining string after root note
 
             # Validate the remaining string as a known chord type
-            if type_string in CHORDS:
+            if type_string in pm.C.CHORDS:
                 chord_type = type_string
             else:
                 # If not found in the dictionary, it could be an empty string
@@ -154,17 +135,14 @@ class ChordSheet:
         part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
         M = bpM * part.ticks_per_beat  # ticks per Measure
 
-        chords = pm.progressions.ii_V_i_i(root)
-        chords = pm.progressions.i_vi_ii_V(root)
-
         piano = part.add_piano()
-        vibes = part.add_vibes()
-        bass = part.add_bass()
-        strings = part.add_strings()
+        #  vibes = part.add_vibes()
+        #  bass = part.add_bass()
+        #  strings = part.add_strings()
 
-        choir = part.add_choir_swell()
+        #  choir = part.add_choir_swell()
 
-        conga = pm.Conga(part)
+        #  conga = pm.Conga(part)
         standard = pm.Standard(part)
 
         for section in self.sections:
