@@ -1,8 +1,14 @@
 import re
 from rich import print, inspect
-import phimidi as pm
+import harmonic_resonance.midiator as pm
 import itertools as itertools
 import random as random
+
+class Section:
+    def __init__(self, name):
+        self.name = name
+        self.line_groups = []
+
 
 class ChordSheet:
     def __init__(self):
@@ -12,44 +18,36 @@ class ChordSheet:
         self.bpM = 4
         self.root = "C4"
         self.key = "C"
-        self.sections = {}  # Each section contains a list of line groups
-
-    def add_section(self, name):
-        self.sections[name] = []
-
-    def add_line_group(self, section_name, chords, lyrics):
-        if section_name not in self.sections:
-            self.add_section(section_name)
-        self.sections[section_name].append({"chords": chords, "lyrics": lyrics})
+        self.sections = []  # Each section contains a list of line groups
 
     def parse_csml(self, csml):
         lines = csml.strip().split("\n")
         current_section = None
-        pending_chords = None  # Store chords waiting for their lyrics
+        pending_line_group = {'chords': [], 'lyrics': []}
 
         for line in lines:
+            #  print(line)
             line = line.strip()
             if line.startswith(":"):
                 key, value = line[1:].split(":", 1)
-                setattr(self, key.strip(), value)
+                setattr(self, key.strip(), value.strip())
             elif line.startswith("*"):
-                current_section = line[2:].strip()
-            elif current_section:
-                if "|" in line:  # This is a chord line
-                    pending_chords = self._process_chord_line(line[2:])
-                elif line.startswith("-") and pending_chords is not None:
-                    # This is a lyric line corresponding to the last seen chord line
-                    lyrics = self._process_lyric_line(
-                        line[2:], pending_chords["measure_positions"]
-                    )
-                    self.add_line_group(
-                        current_section, pending_chords["chords"], lyrics
-                    )
-                    pending_chords = None
+                section_name = line[2:].strip()
+                current_section = Section(section_name)
+                self.sections.append(current_section)
+            elif line.startswith("|"):  # This is a chord line
+                # TODO need to handle case where there is not a section defined yet
+                chord_bars = self._process_chord_line(line[2:])
+                pending_line_group = {'chords': [], 'lyrics': []}
+                pending_line_group['chords'] = chord_bars
+                current_section.line_groups.append(pending_line_group)
+            elif line.startswith("-"):
+                # This is a lyric line corresponding to the last seen chord line
+                lyrics = self._process_lyric_line(
+                    line[2:], pending_line_group['chords']["measure_positions"]
+                )
+                pending_line_group['lyrics'].append(lyrics)
 
-        # In case the last line is chords without corresponding lyrics
-        if pending_chords is not None:
-            self.add_line_group(current_section, pending_chords["chords"], [])
 
     def _process_chord_line(self, line):
         # Store the positions of the '|' characters
@@ -75,9 +73,9 @@ class ChordSheet:
     def parse_chord_symbol(self, symbol):
         # Special symbols handling
         if symbol == "%":
-            return "repeat"
+            return ("%", "")
         elif symbol == "x":
-            return "no_chord"
+            return ("x", "")
 
         # Parse the actual chord notation (root + quality/type)
         match = re.match(r"([A-G][#b]?)(.*)", symbol)
@@ -129,98 +127,49 @@ class ChordSheet:
         title = self.title
         bpm = int(self.bpm) # beats per minute
         bpM = int(self.bpM)  # beats per Measure
-        root = pm.N.NOTES_BY_NAME[self.root]  # the root note of the key
+        root = pm.N.NOTES_BY_NAME[self.root.strip()]  # the root note of the key
         key = self.key
 
         part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
         M = bpM * part.ticks_per_beat  # ticks per Measure
 
         piano = part.add_piano()
-        #  vibes = part.add_vibes()
-        #  bass = part.add_bass()
-        #  strings = part.add_strings()
-
-        #  choir = part.add_choir_swell()
 
         #  conga = pm.Conga(part)
         standard = pm.Standard(part)
 
         for section in self.sections:
-            part.set_marker(f'{section=}', 0)
-            for chord_num, (chord_name, chord) in enumerate(chords):
-                chord2 = [note + 12 for note in chord]
-                chord3 = [note + 12 for note in chord2]
-                chord4 = [note + 12 for note in chord3]
+            print(section.name)
+            part.set_marker(f'{section.name=}', 0)
+            for line_num, line_group in enumerate(section.line_groups):
+                print(line_num)
+                part.set_marker(f'{line_num=}', 0)
 
-                part.set_marker(f'{chord_name} - {chord}', 0)
-
-                if chord_num in [0, 2]:
-                    rhythm = pm.patterns.latin.bossa_nova
-                if chord_num in [1, 3]:
-                    rhythm = pm.patterns.latin.rhumba
-
-                rhythm = pm.patterns.funky.billie_jean
-
-                measures = 4
-                for m in range(measures):
-                    part.set_marker(f'{m + 1}', M)
-                    #  if m == 0:
-                        #  velocity_mod = 10 
-                        #  #  conga.samba(2 * M, velocity_mod=-10)
-                        #  standard.billie_jean(2 * M, velocity_mod=-10)
-                    #  elif m == 2:
-                        #  standard.billie_jean(2 * M, velocity_mod=-10)
-                    #  else:
-                        #  pass
-                    standard.funky_drummer(M, velocity_mod=-10)
-
-                    if chord_num == 3:
-                        if m == measures - 1:
-                            # last
-                            bass.set_note(chord[1] - 12, M, velocity=90)
-                        else:
-                            bass.set_note(chord[2] - 12, M, velocity=70)
-                    else:
-                        if m == measures - 1:
-                            # last
-                            bass.set_note(chord[1] - 12, M, velocity=90)
-                        else:
-                            bass.set_note(chord[0] - 12, M, velocity=70)
-
-                    if loop > 0:
-                        if chord_num == 3:
-                            # last
-                            piano.set_notes(chord2, M, velocity=60)
-                        else:
+                for measure in line_group['chords']['chords']:
+                    #  part.set_marker(f'{measure}', 0)
+                    #  print(measure)
+                    #  chord2 = [note + 12 for note in chord]
+                    for chord in measure:
+                        print(chord)
+                        part.set_marker(f'{chord}', M)
+                        chord_root_name, modifier = chord
+                        if chord_root_name == 'x':
+                            piano.set_rest(M)
+                        elif chord_root_name == '%':
+                            chord = last_chord
                             piano.set_notes(chord, M, velocity=60)
-                    else:
-                        piano.set_rest(M)
+                        else:
+                            chord_root_name += '3'
+                            chord_root = pm.N.NOTES_BY_NAME[chord_root_name.strip()]
+                            chord = pm.get_chord_notes(chord_root, modifier)
+                            piano.set_notes(chord, M, velocity=60)
+                            last_chord = chord
+
+                    patterns = standard.patterns["bille_jean"]
+                    standard.set_patterns(patterns, M, velocity_mod=-10)
 
 
-
-                if loop > 2:
-                    strings.set_rest(3 * M)
-                    strings.set_notes(chord2, M/2, velocity=20)
-                    strings.set_notes(chord3, M/2, velocity=30)
-                else:
-                    strings.set_rest(4 * M)
-
-                if loop > 1:
-                    #  choir.set_rest(M)
-                    #  choir.set_notes(chord, (measures - 1) * M, offset=M/8)
-                    if chord_num == 3:
-                        choir.set_rest(4 * M)
-                        choir.set_volume(32, 4 * M)
-                    else:
-                        choir.set_notes(chord, measures  * M, offset=M/4)
-                        choir.set_volume(32, 0)
-                        choir.ramp_volume_up(2 * M)
-                        choir.ramp_volume_down(2 * M)
-                else:
-                    choir.set_rest(4 * M)
-                    choir.set_volume(32, 4 * M)
-
-
+        return part
 
 
 # A function that reads CSML from a file and returns a populated ChordSheet object
@@ -236,7 +185,13 @@ def parse_csml_file_to_chordsheet(file_path):
 def main():
     chord_sheet = parse_csml_file_to_chordsheet("./flip-flop-and-fly.csml")
     #  inspect(chord_sheet)
-    print(chord_sheet.sections)
+    for section in chord_sheet.sections:
+        print(section.name)
+        print(section.line_groups)
+
+    part = chord_sheet.create_part()
+    part.save()
+    part.play()
 
 
 if __name__ == "__main__":
