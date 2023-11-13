@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>harmonic_resonance.chordulator.chordulator &mdash; HARMONIC resonance • chordulator</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
+    <link rel="canonical" href="https://harmonic-resonance.github.io/chordulator/_modules/harmonic_resonance/chordulator/chordulator.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=187304be"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../search/" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../../log/atom.xml"
+  title="HARMONIC resonance • chordulator"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../" class="icon icon-home">
+            HARMONIC resonance • chordulator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mission/">mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage/">usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules/">modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../demos/">demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../refs/">references</a></li>
+<li class="toctree-l1"><a class="reference external" href="/log#https://">log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../todos/">todos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../">HARMONIC resonance • chordulator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../">Module code</a></li>
+      <li class="breadcrumb-item active">harmonic_resonance.chordulator.chordulator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <h1>Source code for harmonic_resonance.chordulator.chordulator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">from</span> <span class="nn">rich</span> <span class="kn">import</span> <span class="nb">print</span><span class="p">,</span> <span class="n">inspect</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<div class="viewcode-block" id="generate_lines">
+<a class="viewcode-back" href="../../../../modules/harmonic_resonance.chordulator.chordulator/#harmonic_resonance.chordulator.chordulator.generate_lines">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_lines</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&lt;div class=&quot;lines&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="n">open_section</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">open_line</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">open_section</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/section&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">section_name</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="c1">#  section_class = section_name.lower().replace(&quot; &quot;, &quot;-&quot;)</span>
+            <span class="n">section_class</span> <span class="o">=</span> <span class="n">section_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;section class=&quot;</span><span class="si">{</span><span class="n">section_class</span><span class="si">}</span><span class="s1">&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&lt;h2&gt;</span><span class="si">{</span><span class="n">section_name</span><span class="si">}</span><span class="s2">&lt;/h2&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">open_section</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">open_line</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">open_line</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;div class=&quot;line&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">chord_line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">chord_line_with_spans</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span>
+                <span class="sa">r</span><span class="s2">&quot;([A-G,%][#b]?\w*)&quot;</span><span class="p">,</span>
+                <span class="sa">r</span><span class="s1">&#39;&lt;span class=&quot;chord&quot;&gt;\1&lt;/span&gt;&#39;</span><span class="p">,</span>
+                <span class="n">chord_line</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;pre class=&quot;chords&quot;&gt;</span><span class="si">{</span><span class="n">chord_line_with_spans</span><span class="si">}</span><span class="s1">&lt;/pre&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">open_line</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">open_line</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;div class=&quot;line&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+                <span class="n">open_line</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;pre class=&quot;lyrics&quot;&gt;</span><span class="si">{</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s1">&lt;/pre&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;p class=&quot;comment&quot;&gt;</span><span class="si">{</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s1">&lt;/p&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">open_line</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">open_line</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;div class=&quot;line&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;pre class=&quot;lyrics&quot;&gt;</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s1">&lt;/pre&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">open_line</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">if</span> <span class="n">open_section</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/section&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+
+<div class="viewcode-block" id="parse_csml_chord_table">
+<a class="viewcode-back" href="../../../../modules/harmonic_resonance.chordulator.chordulator/#harmonic_resonance.chordulator.chordulator.parse_csml_chord_table">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_csml_chord_table</span><span class="p">(</span><span class="n">csml</span><span class="p">):</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">csml</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">chord_table</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">current_section</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+            <span class="n">current_section</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">chord_table</span><span class="p">[</span><span class="n">current_section</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">):</span>
+            <span class="n">bars</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+            <span class="n">chords</span> <span class="o">=</span> <span class="p">[</span><span class="n">bar</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">]</span>
+            <span class="n">chord_table</span><span class="p">[</span><span class="n">current_section</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">chords</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">chord_table</span></div>
+
+
+
+<div class="viewcode-block" id="generate_chord_table_html">
+<a class="viewcode-back" href="../../../../modules/harmonic_resonance.chordulator.chordulator/#harmonic_resonance.chordulator.chordulator.generate_chord_table_html">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_chord_table_html</span><span class="p">(</span><span class="n">chord_table</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;chord-tables&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+    <span class="k">for</span> <span class="n">section</span><span class="p">,</span> <span class="n">chord_lines</span> <span class="ow">in</span> <span class="n">chord_table</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;  &lt;section class=&quot;chord-table-section&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;    &lt;h2&gt;</span><span class="si">{</span><span class="n">section</span><span class="si">}</span><span class="s2">&lt;/h2&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;    &lt;table&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">chord_line</span> <span class="ow">in</span> <span class="n">chord_lines</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;      &lt;tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">chord_line</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;        &lt;td class=&quot;chord&quot;&gt;</span><span class="si">{</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span><span class="si">}</span><span class="s1">&lt;/td&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;      &lt;/tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;    &lt;/table&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;  &lt;/section&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+
+<div class="viewcode-block" id="generate_web_page">
+<a class="viewcode-back" href="../../../../modules/harmonic_resonance.chordulator.chordulator/#harmonic_resonance.chordulator.chordulator.generate_web_page">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_web_page</span><span class="p">(</span><span class="n">chord_sheet</span><span class="p">):</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">chord_sheet</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Parse field statements</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">):</span>
+            <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">fields</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;Chord Sheet&quot;</span><span class="p">)</span>
+
+    <span class="n">css_path</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span>
+        <span class="s2">&quot;harmonic_resonance.chordulator&quot;</span><span class="p">,</span> <span class="s2">&quot;styles.css&quot;</span>
+    <span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">css_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">css_file</span><span class="p">:</span>
+        <span class="n">css_contents</span> <span class="o">=</span> <span class="n">css_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">&lt;html&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">&lt;title&gt;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&lt;/title&gt;</span>
+<span class="s2">&lt;style&gt;</span>
+<span class="si">{</span><span class="n">css_contents</span><span class="si">}</span>
+<span class="s2">&lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="c1"># header</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&lt;header&gt;</span><span class="se">\n</span><span class="s2">&lt;h1&gt;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&lt;/h1&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;div class=&quot;details&quot;&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="n">header_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;capo&quot;</span><span class="p">,</span> <span class="s2">&quot;capo-key&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">header_fields</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;  &lt;p&gt;</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">fields</span><span class="p">[</span><span class="n">field</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/header&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="c1"># lines</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="n">generate_lines</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+    <span class="n">chord_table</span> <span class="o">=</span> <span class="n">parse_csml_chord_table</span><span class="p">(</span><span class="n">chord_sheet</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">chord_table</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">+=</span> <span class="n">generate_chord_table_html</span><span class="p">(</span><span class="n">chord_table</span><span class="p">)</span>
+
+    <span class="n">output</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&lt;footer&gt;&quot;</span>
+    <span class="c1"># Add fields (excluding title) as key-value list</span>
+    <span class="n">fields_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="sa">f</span><span class="s2">&quot;&lt;li&gt;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&lt;/li&gt;&quot;</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">fields</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;title&quot;</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">fields_list</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;ul&gt;&quot;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fields_list</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/ul&gt;&quot;</span>
+
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/footer&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="n">output</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">var sectionIndex = 0;</span>
+<span class="s2">var sections = document.getElementsByTagName(&#39;section&#39;);</span>
+
+<span class="s2">window.addEventListener(&#39;message&#39;, function(event) {</span>
+<span class="s2">  if (event.data.action === &#39;scrollSection&#39;) {</span>
+<span class="s2">    sectionIndex += event.data.dir;</span>
+<span class="s2">    if (sectionIndex &lt; 0) sectionIndex = 0;</span>
+<span class="s2">    if (sectionIndex &gt; sections.length - 1) sectionIndex = sections.length - 1;</span>
+<span class="s2">    sections[sectionIndex].scrollIntoView({behavior: &quot;smooth&quot;, block: &quot;center&quot;});</span>
+<span class="s2">  } else if (event.data.action === &#39;print&#39;) {</span>
+<span class="s2">    window.print();</span>
+<span class="s2">  }}, false);</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, HARMONIC resonance.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
