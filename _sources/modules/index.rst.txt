@@ -1,10 +1,7 @@
 
-harmonic_resonance.midiator
-===========================
+modules
+=======
 
-.. automodule:: harmonic_resonance.midiator
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. automodule:: harmonic_resonance.chordulator
 
 
