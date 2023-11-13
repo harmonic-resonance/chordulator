@@ -1,10 +1,10 @@
-midiator
-========
+chordulator
+===========
 
 .. include:: intro.rst
 
-recent logs:
-------------
+recent logs
+-----------
 
 .. postlist:: 5
    :excerpts:
@@ -26,8 +26,8 @@ contents:
    todos.rst
 
 
-Indices and tables
-==================
+indices
+-------
 
 * :ref:`genindex`
 * :ref:`modindex`
