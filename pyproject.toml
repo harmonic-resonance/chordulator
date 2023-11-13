@@ -16,6 +16,7 @@ dependencies = [
     "textual",
     "rich",
     "jinja2",
+    "beautifulsoup4",
 ]
 
 [project.scripts]
