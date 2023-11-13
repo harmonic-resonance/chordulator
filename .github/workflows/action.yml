@@ -17,4 +17,5 @@ jobs:
       uses: photon-platform/action-deploy-sphinx-gh-pages@v14
 
       with:
+        modules_repo_urls: 'https://github.com/harmonic-resonance.chordulator.git'
         python_version: '3.10'  # Optional, default is '3.x'
