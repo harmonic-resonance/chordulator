@@ -122,6 +122,11 @@ class ChordSheet:
         return lyrics
 
     def create_part(self):
+        """
+        create a midi part from the chord sheet
+
+        .. todo:: Add lyrics to midi part
+        """
 
         PROJECT = 'chordsheet_test'
         title = self.title
@@ -146,6 +151,7 @@ class ChordSheet:
                 part.set_marker(f'{line_num=}', 0)
 
                 for measure in line_group['chords']['chords']:
+                    
                     #  part.set_marker(f'{measure}', 0)
                     #  print(measure)
                     #  chord2 = [note + 12 for note in chord]
