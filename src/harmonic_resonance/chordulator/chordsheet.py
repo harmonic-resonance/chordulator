@@ -171,7 +171,7 @@ class ChordSheet:
                             piano.set_notes(chord, M, velocity=60)
                             last_chord = chord
 
-                    patterns = standard.patterns["bille_jean"]
+                    patterns = standard.patterns["billie_jean"]
                     standard.set_patterns(patterns, M, velocity_mod=-10)
 
 
