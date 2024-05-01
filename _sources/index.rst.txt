@@ -10,9 +10,6 @@ recent logs
    :excerpts:
 
 
-contents:
----------
-
 .. toctree::
    :hidden:
    :maxdepth: 2
